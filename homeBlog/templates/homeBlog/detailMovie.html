@@ -1,0 +1,61 @@
+{% extends 'homeBlog/basic.html' %}
+	{% block content %} 
+		<head>
+	<title>{{projects.title}}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+<body>	
+	
+	<h1 class = "text-center mt-5">{{projects.title}}</h1>
+	
+	<p>{{projects.description|safe}}</p>
+<div class="w3-content w3-section" style="max-width:800px">
+  <img class="mySlides" src="{{projects.sst1.url}}" style="width:100%">
+  <img class="mySlides" src="{{projects.sst2.url}}" style="width:100%">
+  <img class="mySlides" src="{{projects.sst3.url}}" style="width:100%">
+   <img class="mySlides" src="{{projects.sst4.url}}" style="width:100%">
+    <img class="mySlides" src="{{projects.sst5.url}}" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); 
+}
+</script>
+	</div><br>
+	<div align = "center">
+	<a href = "{{projects.url42}}"><button type="button" class="btn btn-outline-secondary">Download 420P</button><a>
+	<a href = "{{projects.url72}}"><button type="button" class="btn btn-outline-success">Download 720P</button><a>
+	<a href = "{{projects.url10}}"><button type="button" class="btn btn-outline-dark">Download 1080P</button><a></div>
+	<h3 style= "color:Red;">Note: Don't pause/stop while donwloading.</h3>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	{% endblock %}
+</body>
+
+

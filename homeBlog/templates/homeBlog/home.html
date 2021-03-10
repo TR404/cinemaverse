@@ -1,0 +1,59 @@
+{% extends 'homeBlog/basic.html' %}
+	{% block content %} 
+	<title>Cineme Verse </title>
+	<style>
+	        h3{ 
+            font-family: serif; 
+            color: transparent; 
+            text-align: center; 
+            animation: effect 2s linear infinite;  
+        } 
+       
+        @keyframes effect { 
+            0% { 
+                background: linear-gradient( 
+                        #008000, #00FF00); 
+                -webkit-background-clip: text; 
+            } 
+  
+            100% { 
+                background: linear-gradient( 
+                        #3CE7D7, #000FFF); 
+                -webkit-background-clip: text; 
+            } 
+        } 
+    </style> 
+
+	<h1>Collection of New Movies</h1>
+	<h3>Fastest Way Then Ever</h3>
+
+	{% load static %}
+	<div class = "row justify-content-center m-3">
+	
+			<img src = "{% static 'homeBlog/myImage.jpg' %}" >
+		</div>
+	</div>
+	
+	<div class = "row">
+	{% for value in projects %}
+	<div class = "col-lg-4 col-md-6">
+	
+		<h2>{{value.title}}</h2><br>
+		
+		
+		<a href= "{% url 'homeBlog:detailMovie' value.id %}">
+		<img src = "{{value.image.url}}" class ="img-fluid mb-2">
+		</a>
+		<p>{{value.description|striptags|truncatechars:100}}</p>
+		
+	</div>
+	{% endfor %}
+	</div>
+	{% endblock %}
+	
+
+
+	
+	
+	
+

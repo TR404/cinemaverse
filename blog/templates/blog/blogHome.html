@@ -1,0 +1,20 @@
+
+
+{% extends 'homeBlog/basic.html' %}
+	{% block content %} 
+	<title> Tr Blogs</title>
+
+	<h1 id = "blogtitle" class="font-weight-bold text-center">Here you well connected with my latest updates and keep update with me</h1>
+<h4 class = "text-center mb-5">Tr's has Written {{blogs.count}} blog{{blogs.count|pluralize}}</h4>
+	{% for value in blogs %}
+	<div class = "row justify-content-center my-3">
+		<div class = "col-md-10">
+		<a href="{% url 'blog:detail' value.id %}"><h3>{{value.title}}</h3></a>
+		<h5 class = "text-muted">{{value.date|upper }}</h5>
+		<h4>{{value.description|striptags|truncatechars:300}}</h4>
+		</div>
+	</div>
+	{% endfor %}
+	{% endblock %}
+
+	
