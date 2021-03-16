@@ -1,0 +1,62 @@
+{% extends 'homeBlog/basic.html' %}
+	{% block content %} 
+		<head>
+	<title>Search Reasult</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+<body>	
+	<h3 class = "text-center mt-5">Search Result<h3>
+	{% load static %}
+	{% if projects|length < 1 %}
+		<h4> <b> {{search}} </b>Not Found</h4><br>
+		Suggestions:
+		<ul>
+			<li>Make sure that all words are spelled correctly.</li>
+			<li>Try different keywords.</li>
+			<li>Try fewer keywords.</li>
+		</ul>
+	{% endif %}
+	
+	<h1 class = "text-center mt-5">{{projects.title}}</h1>
+	<div class = "row">
+
+	{% for value in projects %}
+	<div class = "col-lg-4 col-md-6">
+	
+		<h2>{{value.title}}</h2><br>
+		
+		
+		<a href= "{% url 'homeBlog:detailMovie' value.id %}">
+		<img src = "{{value.image.url}}" class ="img-fluid mb-2">
+		</a>
+		<p>{{value.description|striptags|truncatechars:200}}</p>
+		
+	</div>
+	{% endfor %}
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	{% endblock %}
+</body>
