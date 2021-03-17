@@ -15,7 +15,10 @@ class Project(models.Model):
 	url42 = models.URLField(blank = True)
 	url72 = models.URLField(blank = True)
 	url10 = models.URLField(blank = True)
-	view = models.IntegerField(default = 0)
 	
 	def __str__(self):
 		return self.title
+class User(models.Model):
+	user = models.TextField(default = None)
+	def __str__(self):
+		return self.user
