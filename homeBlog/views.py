@@ -11,6 +11,8 @@ def home(request):
 	
 def detailMovie(request, movieId):
 	projects = get_object_or_404(Project, pk = movieId)
+	projects.view = projects.view + 1
+	projects.save()
 	return render(request, 'homeBlog/detailMovie.html', {'projects': projects})
 	
 def searchbar(request):
