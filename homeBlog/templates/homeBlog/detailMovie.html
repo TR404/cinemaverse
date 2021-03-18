@@ -13,7 +13,6 @@
 <body>	
 	
 	<h1 class = "text-center mt-5">{{projects.title}}</h1>
-	
 	<p>{{projects.description|safe}}</p>
 <div class="w3-content w3-section" style="max-width:800px">
   <img class="mySlides" src="{{projects.sst1.url}}" style="width:100%">
@@ -45,7 +44,7 @@ function carousel() {
 	<a href = "{{projects.url72}}"><button type="button" class="btn btn-outline-success">Download 720P</button><a>
 	<a href = "{{projects.url10}}"><button type="button" class="btn btn-outline-dark">Download 1080P</button><a></div>
 	<h3 style= "color:Red;">Note: Don't pause/stop while donwloading.</h3>
-	 <a> (<span>{{count}} Views </span>)</a>
+	 <a> (<span>{{projects.view}} Views </span>)</a>
 	<br>
 	<br>
 	<br>
