@@ -1,34 +1,49 @@
 
 {% extends 'homeBlog/basic.html' %}
 	{% block content %} 
-    <h1>You Can Give Your Valuable Feedback or Suggesion to Improve Users Experience</h1>
+    <h1 class="mt-2">You Can Give Your Valuable Feedback or Suggesion to Improve Users Experience</h1>
 
 
     <form class="was-validated" method = "POST" >
+    <div class="row border border-black mt-1 mb-1  p-3 pb-0 pt-0">
     {% csrf_token %}
-    <div class="row">
-  <div class="col">
+    <div class="row p-3 pb-0 pt-0">
+  <div class="col-12">
+    <input type="text" name = "detail"  class="form-control" id="inputAddress" placeholder="Most Welcome to your Valuable Comment for Improving Site" required>
+  </div>
+    <div class="row p-3 pb-0">
+  <div class="col-3">
     <input type="text" name = "name" class="form-control" placeholder="Your Name" aria-label="Name" id="inputCity" required>
   </div>
-  <div class="col">
+  <div class="col-4">
     <input type="text" name = "email" class="form-control" placeholder="email@email.com" aria-label="Email" id="inputEmail4" required>
   </div>
 </div> 
 <br>
-  <div class="col-12">
-    <input type="text" name = "detail"  class="form-control" id="inputAddress" placeholder="Most Welcome to your Valuable Comment for Improving Site" required>
-  </div>
-
-	<br>
+ <p>      Your Email will not be Published*</p>
+</div>
+ 
+	
+  <div class="row p-3 pb-0 pt-0">
     <div class="col-12">
-    <button type="submit" class="btn btn-primary">Save </button>
+    <button type="submit" class="btn btn-outline-success">Comment </button>
+  </div>
+  </div>
   </div>
 </form>
     
     {% for comm in preComment %}
-    	
-		 <legend style="color:green">{{comm.name }} : {{comm.email }}</legend>
-    		<p ><b>{{comm.detail }}</b></p>
+
+    <div class="row border border-black mt-1 mb-1  p-3 pb-0 pt-0">
+      <div class="col-auto text-end">
+        <h4 style="color:green">{{comm.name }} : </h4>
+      </div>
+      <div class="col-auto text-left">
+        <p style="color:#000">{{comm.detail }}
+        </p>
+      </div>
+    </div>
+    		
     	{% endfor %}
 
     
