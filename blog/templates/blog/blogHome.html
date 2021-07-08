@@ -10,8 +10,8 @@
 	<div class = "row justify-content-center my-3">
 		<div class = "col-md-10">
 		<a href="{% url 'blog:detail' value.id %}"><h3>{{value.title}}</h3></a>
+		<h4>{{value.description|linebreaks|safe|striptags|truncatechars:300}}</h4>
 		<h5 class = "text-muted">{{value.date|upper }}</h5>
-		<h4>{{value.description|striptags|truncatechars:300}}</h4>
 		</div>
 	</div>
 	{% endfor %}
