@@ -1,0 +1,1837 @@
+come current location "pwd"
+create file "touch"
+move current next folder "mv old.doc ./Folder"
+folder ke ander folder or usme file ke liye : touch static/Application/Js/Script.js static/Application/CSS/Style.css 
+folder ke ander folder or usme multiple folder bnane ke liye : mkdir static/Application/Js static/Application/Images
+
+koi folder bnane ke liye mkdir use karete h
+pr yadi mere ko koi space wala folder bnana h ya del karna h to ise me mkdir "folder name" isa de sakte h
+remove file "rm"
+or yadi empty folder nhi h to apne ko -r lagana hoga rm -r fileName
+remove folder "rm-d folder name"
+come back folder "cd .."
+move one back folder "mv file .."
+copy file with next folder "cp file ./Folder/"
+
+
+kuch bhi print karne ke liye hum ("") ya ('') ka use kr sakte h. isme hum kise ko saath use nhi kr sakte ex
+print("hello "world" world") yadi ek saath do times use karna h to isme liye \ use karna hoga.
+ex print('I\'m Tiwari')
+
+
+# ka use comment line ke liye hota h. 
+print(r"data \n data 2") iska outpur same hoga qke r ke use se hum isko text ke tarah use karenge na ke escape sequence ke tarah.
+ isme / ka use floating pointer ke liye operator me use kar sakte h jise 4/2 ka ans 2.00 hoga or // iska use se hum point ke baad ka hata hua output pate h.
+ isme cube ya squar pane ke liye simple 2**3 karne pr 8 ans milega.
+ ye dynamic programing language bhi h jise isme hum char= 123 kare to wo 123 ko print karega.
+ number se start nhi kr sakte h pr center me number de sakte h pr $ type ke sign ko ko shart ya kahi bhi use karne pr error show hoga.
+ Ek se jyda varible ko use karte time _ ka use karne ko snake case writing bolte h.
+ userRohit jisme second ka 1st use karne ko canel case writing kahte h.
+       
+       
+       kise string me into use kr sakte h jise name *3 to result hoga namenamename
+       
+       keybord se data lene ke liye input ka use karte h jise name = input("type a name ")
+       input always string me leta h bole to yadi 25 likhe to wo 25 as a string he hoga.
+ 
+ 
+  ise he int(input("text here")) karne pr ye intiger lega.
+  firstNumber = int(input("Pahila koi number de = "))
+secondNumber = int(input("Agla number bhi like le = "))
+sara = firstNumber+secondNumber
+print("Tera sara aaya hai : "+str(sara))
+
+
+  ek saath print me 2 data ko likhne ke liye address ke aage piche + dena hota h print("Hello" +name+ "Age" +age) kuch is tarah. thik ise tarah hum 2 input ko ek saath karne ke liye .split ka use karte h ex: 
+  name age = inpur("Enter a Name ").split()
+  print(name)
+  print(age)
+   bs data dene time split me jo likha h use karna hoga jise upper kuch nhi h to space dena hoga ise he .split(",") ho to name ke baad , dena hoga nhi to error hoga.
+   ise he string formating me baar baar ++ lagane pr time leta h to ise me print(f"Hello{name} age {age}") ya print("name {} age {}" fromat(name , age)) or ye direct likh dega. or saath me age ke saath +4 lagane pr ye result 4 jyda auto kr ke dega.
+   
+                                  Chaper 2
+ isme kise string ka position pata karne ke liye [] ka use karte h jise rohit me print(abhi[3]) karne pr "h" show hoga. ise he jyda long hone pr hum last ka count nhi kr paa rahe h to hum -1  [] dal denge to ye last index ka address dega.
+ string slicing me 1 se jyda string ko print kr sakte h jise [start argument : stop argument] 
+ ise he step argument se hum apne comment ko kitna step se likhna h wo de sakte h ex: syntax print("data"[start argument:stop argument:stop])  example ke liye 
+ name = input("Enter a Name : ")
+print(f"Reversing is '{name[-1::-1]}'")
+yaha pr dekhne wala baat ye h ke yadi hum {::} iske first value le -1 ya 1 de to reverse karega pr yadi  1 kr de to ab ye mere 2 data ko escape kr dega
+
+
+ string function-> len() ye charecter ka length count karta h. with space.
+ 		  lower() ye charecter ko lower me change kr dega isko varible ka address bhi de sakte h jise name = ShIvam TiwarI
+ 		  print(name.lower())
+ 		  to outpur shivam tiwari dega
+ 		  upper() ye sara case ko bada kr dega same lower method jisa.
+ 		  title() ye First  letter ko capital kar deta h or sabhi small. or ye space ke baad bhi same 1st ko capital karega or sabko small.
+ 		  count() ye koi 1 char string me kitna time h wo count karta h example ke liye
+ 		  data = "Rohit Mohit Shobhit"
+print(data.count("o"))
+
+
+ 		  isme ek name keybord se lena h or uske char ko count karna h with case sinctive jisko karne ke liye pahle sare char ko lower me kar denge or fir usko print kara lenge.
+ 		  name = input("Write Your Name = ")
+age = input("Write Your Age = ")
+print("Name = "+ name)
+print("Age = "+ age)
+
+
+ 		 strip() ye do type ke hote h lstrip() or rstrip() l left ko or r right ke space ko remove karta h or ise he strip dono taraf ka remove karta h. iske liye bhi example 
+ 		 name = "Fat Cat Jump Tub"
+print(len(name))
+print(name.count("a"))
+# Other enter 2 char in one line  through keybord.
+name, char = input("Your Name , Char to Count ").split(",")
+print(f"Length of My charecter is {len(name)}")
+print(f"Character Counting : {name.strip().lower().count(char.strip().lower())}")
+"""ab isme mere ko koi name likhne h or kya count karna h wo bhi dena h , ke use se 1st print me name la len bata raha h or next wale me pahle to apne koi word yadi capital me h to small me karega fir jo count karna h wo count karega
+"""
+
+
+
+ 		 replace() method ye replace karta h ex. print(string.replace("is","was",2))
+ 		 find() method ye find karne ka kaam karta h ex. print(string.find("kuch",5)) ye last wala number bata raha h ke kaha se khozna start karna h example me yahi koi word kafi times h to pahel 1st ka location pata kare fir 1st ka location de kr next wala serch karna hoga. example 
+ 		 data =input("Enter a Secntnce to find is :")
+print("Pahla is ka Number ",+data.find("is"))
+is_l1 = data.find("is")
+is_l2 = data.find("is",is_l1+1)
+print(f"or Agla is  {is_l2} Number pr hoga...")
+
+
+
+ 		 center() method ye kise text ko center me add karta h jise **Mohit** karna h to isme
+ data = input("Enter a Name : ")
+print(data.center(len(data)+8, "*"))
+syntax center(data,"number") number es liye dena h take pata chale kitna kya lagana h.
+ 
+ 
+ 
+     				Chapter ==> 3 (loop, if else)
+	if or else ka bhi same noutanki h lagane pr : dena h or jab bhi use karna h tab dena h qke or sab language me {} dena hota h pr isme ye nhi dena hoga h is liye in statement ke baad tab dena h. ex 
+	age = int(input("Enter Your Age : "))
+if age >= 14:
+	print(".....You can Play.....")
+else:
+	print(".........Bakk Sale jo or bada ho kr aao.......")
+	  or 
+	  winningNumber = 57
+user_input =int(input("Guess a Number Between 1-100 : "))
+if user_input == winningNumber:
+	print("********YOU WIN********")
+else:
+	if user_input < winningNumber:
+		print(f'.....Your "{user_input}" Number is too low.....')
+	else:
+		print(f'.....Your "{user_input}" Number is too high....')
+		
+		
+	and or dono ka noutanki ye h ke and me sara condition true hoga to work karega or or me koi 1 true hoga to bhi work karega. ex 
+	userName = input("Enter Your Name : ")
+user_age = int(input("Enter Your Age : "))
+if user_age >=14 and (userName[0] == 'a' or userName[0] == 'A'):
+	print(".......Your Can Watch 18+ Movies....")
+else:
+	print(".....Bhag yaha se.......")
+	or if else ko jyda use karna h to elif use karna hota h ex 
+	age = int(input("Enter Your Age : "))
+if age <=0:
+	print("......You can't watch.....")
+elif 0<age<=10:  #yaha pr or ka use bhi kr sakte h ex if age ==0 or age<0:
+	print("......Free for You.......")
+elif 10<age<=20:
+	print("100 de Cineme dekhe ko.")
+elif 20<age<=60:
+	print("250 de Movie dekhne ko.")
+else:
+	print("Ticket 200 ka padega...")
+	
+	
+	empty condition ye user kuch entry kiye h ya nhi check karnee ke liye use hota h example me 
+	name = input("Enter a Name : ")
+if name :
+	print(f"Your Name is {name}")
+else:
+	print(r"You Didn't type Anything.")
+	
+	
+	loop start while loop show example 
+	select = int(input("1.For Add Upto Given Number 2.For Add Giver Number : "))
+if select == 1:
+	i = int(input("Enter a Number : "))
+	a = int(input("Enter  Upto : "))
+	total = 0
+	while i<= a:
+		total = total + i
+		i = i + 1
+	print(total)
+else:
+	number = input("Enter a Number : ")
+	total = 0
+	i = 0
+	while i < len(number):
+		total =total + int(number[i])
+		i = i + 1
+	print(total)
+
+
+ or 
+ name = input("Enter Your Name : ")
+i = 0
+temp_var = ""
+while i< len(name):
+	if name[i] not in temp_var:
+		temp_var += name[i]
+		print(f"{name[i]} : {name.count(name[i])}")
+	i += 1
+	
+# jisa ke isme koi naam ko lena h or wo kitna baad uska alphabet aaya h count karna h . or sabse main wo 
+# koi alpha 2 ya jyda h to repeat na ho isa bnaya gaya h.
+
+
+	next loop for loop hota h pr ye or sab language se thora diff h like c, c++ in sabse
+	isme ex -> for i in range(): bole to i var h range me kaha se kaha tk jana h dena h. ex 
+	total = 0
+num = input("Enter a Number : ")
+for i in range(0, len(num)):
+	total += int(num[i])
+print(total)
+""" ab koi naam ka charecter kitna baar aaya h wo dekhna h
+ name = input("Enter a Name : ")
+ temp = ""
+ for i in range(len(num)):
+ 	if name[i] not in temp:
+ 	print(f"{name[i]} = {name.count(name[i])}") """
+	 or 
+	num = int(input("Enter a Number : "))
+total = 0
+for i in range(1,num+1):
+	total += i
+print(total)
+# jitna bhi number denge sare ka add kr ke dega 
+
+	break and continue ka use humlog apna loop ko bich me stop ya chalane ke liye karte h ex
+	for i in range (1,11):
+	if i==5:
+		break
+	print(i)
+	
+	
+# ise he continue ka statement 
+for i in range(1,21):
+	if i == 5 or i== 10 or i== 15:
+		continue
+	print(i)
+""" saaf bole to break se apna loop chalna bnd ho jayega pr continue se jaha lagaya gaya h usko chor ke aage badh jaega bole to wo wala action nhi karega.
+"""
+	DRY ->  iska mtlb don't repeat yourself 
+	import random
+winningNumber = random.randint(1,100)
+guess = 1
+num = int(input("Enter a number 1 to 100 : "))
+gameOver = False
+while not gameOver:
+	if num == winningNumber:
+		print(f"You win, and you gussed in {guess} times.")
+		gameOver = True
+	else:
+		if num < winningNumber:
+			print("Too Low.")
+		else:
+			print ("Too High.")
+		guess += 1
+		num = int(input("Guess Again : "))
+
+# is program me 2nd if else me guess or num wala 2 baar likhna hota pr yaha dono me na likh kr 1st wale 
+# block me likh dene se ye dono me kaam karega isko he DRY  method bolte h.		
+
+	
+	sted argument -> ye for loop me same purane wale jisa work karta h jise (1,11,2) isme 1 kaha se chalna h 11 kaha tk jana h or 2 bata raha h kitna ka step se chalna h.
+	for loop ko kuch is type ka bhi use kr sakte h jise... input se number lene pr total 0 se start karne pr for i in num: or totao =+ int(i) ise karne pr bina len ka use kiye direct input number ka add kr sakte h.
+	
+	
+	
+				Chapter ===> 4 (Function)
+	function jise len ho gaya center ho gaya ye sab ko pahle se define kiye gaya h jisko hum kahi bhi kaam me la sakte h ise he humlog khud ka bhi function bana sakte h jisko define karne ke liye def ka use karte h.
+	example me 
+	def add_two(x,y):
+	return x + y
+
+num1 = int(input("Enter 1st Number : "))
+num2 = int(input("Enter 2nd Number : "))
+total = add_two(num1,num2)
+print(f"Total : {total}")
+# function me string bhi pass kara sakte h or ye normal likha hua naam ko jise mohit tiwari ko saath kr dega.
+# ye ek dynamic programing language h.
+# ise he function me return ke place pr print bhi likh sakte h jisse ye direct function calling pr print kr ke dega.
+
+
+	koi function me define karne ko parameter bolte h or calling ko argument  bola jata h.
+	kuch or example of function ke liye
+	def greatest(a,b,c):
+	if a>b and a>c:
+		return a
+	elif b>a and b>c:
+		return b
+	else:
+		return c 
+
+num1 = int(input("Enter a Number : "))
+num2 = int(input("Enter a Number : "))
+num3 = int(input("Enter a Number : "))
+print(f"Greatest Number is : {greatest(num1,num2,num3)}")
+
+
+	palindrome bole to isa word jo aage piche dono taraf se padhne se same he meaning aaya h malayalam, madam etc example 
+	def PalEndrom(word):
+	if word == word[::-1]:
+		return True
+	return False
+
+a = input("Enter a Word to check : ")
+print(PalEndrom(a))
+# kahani to smgh me aa raha hoga isme def kiya gaya h jisko bola gaya h ke isme ka word yadi opposite ke equal h to 
+# true nhi to galat.
+
+
+	fibonacci searies bole to start ke number ka sum next number hoga ex 0 1 1 2 3 5 8 13 21 34 etc 
+	def fibonacci(n):
+	a = 0
+	b = 1
+	if n == 1:
+		print(a)
+	elif n==2:
+		print(a,b)
+	else:
+		print(a, b, end = (" "))
+		for i in range(n-2):
+			c = a+b
+			a = b
+			b = c
+			print(b , end = " ")
+			
+d=int(input("Enter a number to get Fibonacci Sequence : "))
+print (fibonacci(d))
+
+# kahani kuch isa h ke start me ek fibonacci ko def kiye
+# is searies me 0 ,1 to start se aata he h is liye value pahle se he de diye jisko bola gaya yadi koi 1 ka bole to 0
+# aaye or 2 ka bole to 1 aaye fir yadi 2 se upper ka bole to 1, 2 value print ho jisme end lagaya gaya h space ke
+# saath jiska mtlb h for space ke saath chale. ab c new banaya gagya jo a +b ko rakh lega a ka value b rakh lega or
+# b ka value c me aa jayega fir b print kara diye jayega or isa he chalta rahega.
+
+
+	scope  iska mtlb ye h ke yadi koi variable ko hum function me define kr diye to usko kahi or use nhi kr sakte or wo define varible ko local variables bolte h ha jo function ko def kiye h usko call kr sakte h. ise he koi variable ko def se pahle value dene ko global variable bolte h or yadi hum function call karenge to fun ka varible or bina function ke gobbal variable show karega. or yadi global ko def me call karne pr hum global ka value ko bhi change kr sakte h or ye fun ke call ke baad global ka call karne pr local wala value print karega.
+	
+	
+	
+				Chapter ===> 5 (list)
+	
+	
+	next python me list bnane ka option pahle se diye hota h jisme kuch bhi store kara sakte h
+	# list me hum kuch bhi add kr sakte h bole to string float ya int 1 he line me
+n = ["data", "ram", 2, 2.5, None]
+print (n)
+  # isko kaha se kaha tk call karna h wo bhi select kr sakte h.
+print(n[:2])
+  # or hum isko change bhi kr sakte h
+n[2] = "Two" 
+print(n)
+# hum ek saath sabhi ko change bhi kara sakte h bs start ka location dena h or change me kya dalna h de kr 
+n[1:] = ['dekho', "change", "ho"]
+print(n)
+
+
+# list 0 se start hota h or yaha jo 2 likha h wo 3rd number ko change kr raha h ya replace kr raha h
+
+
+	list me kuch add karne ke liye append ka use karte h jo always last me use karta h ex 
+	vegitable = ["potato", "tomato"]
+# isme hum kuch or bhi add kr sakte h append ko use kr ke or ye always last me he add karta h.
+vegitable.append("chilli")
+vegitable.append("karila")
+vegitable.append("or")
+print(vegitable)
+
+# hum apne location ke hishab se bhi list me data add kara sakte h. insert(1, " chilli")
+
+vegitable.insert(3, "pata na")
+print(vegitable)
+fru = ["aam", "lichi"]
+# ye add karne ka kaam karta h.
+alla = vegitable + fru
+print(alla)
+# ye 1 me 2 ko add karta h bina varible banaye.
+vegitable.extend(fru)
+print(vegitable)
+print(fru)
+# ye list ke ander ek or list banata h.
+vegitable.append(fru)
+print(vegitable)
+# pop, del, remove 
+vegitable.pop()
+print(vegitable)
+del fru[1]
+print(fru)
+vegitable.remove("potato")
+print(vegitable)
+
+# check list method simple h if in ka use karna h
+if "mango" in fru:
+	print("Mango is present")
+else:
+	print("Not present")
+	
+	
+	 isme hum insert, join , extend, append ka bhi baat karenge jise insert bataye hue location pr add karta h. last element ko del karne ke liye pop() ka use karte h or yadi isme pop(2) dalne pr ye selected data ko del karega. del bhi same kaam karta h pop jise or koi kaha pr h list me pata nhi h to remove ka use karte h hatane ke liye. 
+	or bhi kuch method h jisee count ye same old count jisa h. , waise he sort wala alphabetic arrange karta h. fruit.sort() kuch ise. or ye number ka list hua to number ke hishab se ho jayega. ise he print(sorted(number)) in line sort karega. number.clear()  apne list ke data ko clear kar dega or numberCopy  = number.copy() ye copy kar deta h equal (==) ye value equal hone pr same bol deta h pr is address , place sara check karta h  ex 
+	data1 = ["a","b","c"]
+data2 = ["a","b","c"]
+print(data1==data2)
+print(data1 is data2)
+# == value ko dekhata h pr is address place sabko check karta h is liye 2nd galat h.
+
+
+	string vs list to string me diye hue value ko change nhi kr sakte h jise s= "string" t= s.title()
+print(t) mtlb ye t ke value ko bada karega na ke direct string ke s ko bada kr dega. pr list me hum pop ya koi bhi command dene pr wo direct list ko change karega.	ise liye string immutable h or list mutable h. ise he list me loop bhi use kr sakte h bs for i in range fru: likhna h fir ye auto ek ke baad ek ka naam deta jayega ise he range function apne liye list bhi banata h ex me number = list(range(1,10)) print(number) ye mere liye ek 1 se 10 tk ka list bana kr dega. yadi index ka baat kare to print(number.index(1,10,14)) isme pahle se start karna h or last wala bata raha h 14 tk jana h or  center wala bata raha h bich me or kitna pr aaya h or center wale se hum de sakte h ke usko hata kr kare example 
+def sql(l):
+	squ = []
+	for i in l:
+		squ.append(i**2)
+	return squ
+	
+num = list(range(1,11))
+print(sql(num))
+ or 
+ 
+# pahla tarika direct reverse ko use kr ke
+def rev(l):
+	l.reverse()
+	return l
+	
+number = [1,2,3,4,5]
+print(rev(number))
+
+# list ke function ke dwara reverse karne ka method
+
+def reverseItem(l):
+	empt =[]
+	for i in range(len(l)):
+		poppedItem = l.pop()
+		empt.append(poppedItem)
+	return empt
+	
+num = [1,2,3,4]
+print(reverseItem(num))
+
+# kuch isa hee kaam word ke saath bhi karta h jisme kuch word honge or wo reverse karna h
+
+def reverseElement(l):
+	element = []
+	for i in l: 
+		element.append(i[::-1])
+	return element
+	
+word = ['rohan', 'shyam', 'ram', 'data']
+print(reverseElement(word))
+# ab ek or def bnana h jo even or odd ko alag kr ke result dega.
+def filterEvenOdd(l):
+	evenNum = []
+	oddNum = []
+	for i in l:
+		if i % 2 == 0:
+			evenNum.append(i)
+		else:
+			oddNum.append(i)
+	output = [evenNum, oddNum]
+	return output
+		
+fil = [1,2,3,4,5,6]
+print(filterEvenOdd(fil))
+
+# isme mere ko 2 input lena h list me or output me inme se common ko return karega.
+def commonFinder(l1,l2):
+	output = []
+	for i in l1:
+		if i in l2:
+			output.append(i)
+	return output
+	
+print(commonFinder([1,2,3,4,5,6],[3,5,7,8,9,0]))
+
+# min or max apne naam jisa he kaam karta h.
+
+def gratest_diff(l):
+	return max(l)-min(l)
+	
+numb = [43,44,56,78,1,99]	
+print(gratest_diff(numb))
+
+# list ke ander kitna list h pata karne ka 
+
+def sublist_counter(l):
+	count = 0
+	for i in l:
+		if type(i) == list:
+			count +=1
+	return count
+	
+mixed = [1,2,3,[6,8],[1,5,6]]
+print(sublist_counter(mixed))
+
+
+
+
+
+
+
+
+
+				Chapter ===> 6  (Tuples)
+ ye immutable hota h or isme bhi data store karte h. isme bnane ke baad update nhi kr sakte  isme liye () use  karte h isme add , del use nhi kr sakte isko jab fix hota h data change nhi hoga to use karte h jise days etc.
+ isme count index len slicing kr sakte h. ek he element ka touple karne ke liye (2,) karna zaruri h  nhi to ye int ya string hota h. isko bina parenthesis ka bhi bana sakte h simple s= "ram","shyam", "apna" ye bhi tuple h
+ tuple me list bana ho to usme hum list ka sara action kr sakte h jise pop, append sabhi  bs isa karne ke liye pahle list ka location dena h or fir list ka sara function use kar sakte h ex me fov[2].pop() isme 3 number pr list hoga or list se data ko nikala jaa raha h.ismem min(), mix() sum use kr sakte h. ex me 
+ def func(int1, int2):
+	add = int1+int2
+	multiply = int1*int2
+	return add, multiply
+	
+# isme note wala baat ye h ke dif ek saath 2 return nhi deta is situation me ye touple bana deta h 	
+print(func(2,3))
+# iske solution ke liye 2 varible bana kr bada sakte h.
+add, multiply = func(2,3)
+print(add)
+print(multiply)
+print(type(func))
+
+# ise he hum range ke use se bhi touple create kr sakte h.
+s = tuple(range(1,11 ))
+print(s)
+
+
+ 
+ 
+ 				Chapter  ===> 7 (Dictionaries)
+ 				
+ 				
+	
+list se all data sahi se kaam kare isa hota nhi h to apne data ko or sahi bnane ke liye dictionary ka use karte h isko bnane ke 2 rule h {} or dict ka use karna. ex 7dicInt.py dekhna hoga. isme data kuch print(user1["Name"]) ise show karte h or isme store kuch bhi kr sakte h.
+# 1st method ==>
+user1 = {"Name" : "Mohit", "Age" : "24"}
+print(user1)
+print(type(user1))
+
+# second method ==>
+user2 = dict(Name = "Mohit", Age = "24")
+print(user2)
+
+# output same hoga jisa ke isme h bs tarika change hota h.
+# ab data ko hum index se access nhi kr sakte h is liye iska tarika kuch isa h
+
+print(user1["Name"])
+print(user2["Age"])
+
+# list ko ise bhi create kr sakte h
+user3 = {
+ "Name" : "Mohit",
+ "Age" : "24",
+ "Hoby" : "Pata Nahi",
+}
+print(user3)
+print(user3["Hoby"])
+# dic ke ander bhi dic bana sakte h ye always key dekhta h
+user4 = {
+ "Name" : "Mohit",
+ "Age" : "24",
+ "Hoby" : "Pata Nahi",
+}
+if "Name" in user4:
+	print("Present")
+else:
+	print("Not Present")
+# value check karne ka tarika .values() likhna hoga.
+if "Mohit" in user4.values():
+	print("Present")
+else:
+	print("Not Present")
+# loop chalane ka tarika
+for i in user4:
+	print(i)
+for i in user4.values():
+	print(i)
+	
+# add data
+user4["or"] = "checking"
+print(user3)
+# del karne ke liye pop use karna hoga
+user4.pop("Age")
+print(user3)
+poppedItem = user3.pop("Age")
+print(poppedItem)
+print(user3)
+#update dic iske alawa koi same name ka key hoga to wo purane wali ko new wala se update kr dega.
+user3.update(user4)
+print(user3)
+
+# get key se koi key khoz sakte h or yadi wo na hua to none likhega.
+print(user3.get("search"))
+print(user3.get("search", "Not Found!"))
+# copy or clear ka use
+
+user3copy = user3.copy()
+print(user3copy)
+user3copy.clear()
+print(user3copy)
+
+
+
+
+				Chapter ==> 8 (set)
+unorder data collection hota h ye bhi list jisa hota h ye unique intems bhi hota h bole to koi bhi same data nhi hota sara unique hoga. {1,2,2,3} = {1,2,3} aayega. isme indexing nhi kr sakte h. koi list a1 = set(listname) kr dene se wo set ho jayega or duplicate remove ho jayega. example
+dale=int(input("1. for Find Cube of Any Number \n2. For Count word in Name \n3. user input Dic. \nSelect Any option : "))
+if dale==1:
+	def cubeFinder(n):
+		cubes = {}
+		for i in range(1,n+1):
+			cubes[i] = i**3
+		return cubes
+
+	num=int(input("Koi Number likh : "))
+	print(cubeFinder(num))
+
+elif dale ==2:
+	# word count karne ke liye taki ek he word dubara na aaye
+	def wordCount(s):
+	 	count = {}
+	 	for char in s:
+	 		count[char] = s.count(char)
+	 	return count
+	 	
+	nam = input("Enter a Name : ")
+	print(wordCount(nam))
+elif dale ==3:
+
+	edic = {}
+	name = input("What is Your Name : ")
+	age = input("What is Your Age : ")
+	hoby = input("What is Your hoby : ")
+	like = input("What is Your like : ")
+	edic["name"] = name
+	edic["age"] = age
+	edic["hoby"] = hoby
+	edic["like"] = like
+
+	for key, value in edic.items():
+		print(f"{key} : {value}")
+		
+else:
+	print("**Select Right Option**")
+
+ isme list or dictionary ko saath add nhi kar sakte h.
+
+
+				Chapter ===> 9 (list Comprehension)
+				 
+				 
+iske help se list ko 1 line me he badal sakte h. ex: 9listComp.py isko karne ke liye kya append karna h wo pahle likhna h or loop bhi ise line me likh dena h for print kara kr aa jayega. isme for if else saath use karne ke liye pahle kya append karna h if wala dena h fir if kya h dena h fir else dete hue appden kya karna h or last me for lagana h. 6 number me details h iska. 
+data = int(input("select some numbers : "))
+
+if data ==1:
+# square ka tarika list or comp dono se.
+	squa = []
+	for i in range(1,11):
+		squa.append(i**2)
+	print(squa)
+# ab comp ka tarika 
+	square2= [i**2 for i in range(1,11)]
+	print(square2)	
+
+#
+elif data ==2:
+	names = ["Bangali", "Rohit", "Mohit"]
+	newList = []
+	for i in names:
+		newList.append(i[0])
+	print(newList)
+# ab Comprension ka tarika
+	name2 = [i[0] for i in names]
+	print(name2)
+	
+# reverse string ko karne ka tarika dono method se.
+elif data ==3:
+	ro = input("First Name : ")
+	mo = input("Second Name : ")
+	ba = input("Third Name : ")
+	newro = []
+	newmo = []
+	newba = []
+	newro.append(ro)
+	newmo.append(mo)
+	newba.append(ba)
+	def revString(l):
+		newList = []
+		for i in l:
+			newList.append(i[::-1])
+		return newList
+	print(f"{revString(newro)}{revString(newmo)}{revString(newba)}")
+	def revstring(l):
+			return [i[::-1] for i in l]
+	print(f"{revstring(newro)}{revstring(newmo)}{revstring(newba)}")
+elif data ==4:
+# if ka use karte hue comprension me pr pahle purana tarika
+	num = list(range(1,11))
+	nums =[]
+	for i in num:
+		if i%2==0:
+			nums.append(i)
+	print(nums)
+	even=[i for i in range(1,11) if i%2==0]
+	print(even)
+	odd=[i for i in range(1,11) if i%2!=0]
+	print(odd)
+# int ko string bnana or usko direct koi or list me likhne ka tarika.
+elif data ==5:
+	def numToString(l):  
+		return [str(i) for i in l if(type(i)==int or type(i)==float)]
+	print(numToString([True, False, 1, 1.19, "ram", [1,2,3]]))
+# if else ka use direct method se
+elif data ==6:
+	nums = [1,2,3,4,5,6,7,8,9,10]
+	new_list= [i*2 if i%2==0 else -1 for i in nums]
+	print(new_list)
+	
+# Nesting of list in comprension me
+elif data ==7:
+	nesting = [[i for i in range(1,4)] for j in range(3)]
+	print(nesting)
+else:
+	print("Try Again...")
+
+
+				Chapter ==>10 (dict, set Comprehension)
+				
+ ye bhi list jisa he h bs isme key or uska value ka matter aata h example me 
+ data = int(input("Enter a Number : "))
+if data ==1:
+# square bnane ka tarika dic me comp ko use kr ke
+	square = {f"Square of {num} is " :num**2 for num in range(1,11)}
+	for k, v in square.items():
+		print(f"{k} : {v}")
+		
+	# dic ka khas baat h ke ye over ride kr deta h to double ka to baat he nhi h.
+	string = "Mohit"
+	wordCount = {char:string.count(char) for char in string}
+	print(wordCount)
+elif data ==2:
+#if else ka use karte hue even odd pata karna dic me comp ke saath
+	oddEven = {i:("Even" if i%2==0 else "Odd") for i in range(1,11)}
+	for k,v in oddEven.items():
+		print(f"{k} : {v}")
+else:
+	print("Try Again.")
+	
+	 set bhi 1 he line me use karne ka tarika dekha jayega or iske liye 
+	 # set ka sabse main baat ye koi order me nhi hota h bole to 1 se 10 tk me kuch bhi kabhi bhi likh sakta h.
+s= {k**2 for k in range(1,11)}
+print(s)
+
+name = {"Bangali", "Mohit", "Rohit"}
+first = {nam[0] for nam in name}
+print(first)
+ 
+ 
+ 
+ 
+ 				Chapter ==> 11 (Normal parameter,*args,default parameter, **kwargs)
+ 				
+ iska kahani kuch isa h ke ye pointer ke jisa h args ke place pr kuch bhi likh sakte h bs pointer dena zaruri h. yadi def me a+b define ho to 2 se jyda variable dene pr bolege sale ko smgh nhi aa raha h ise me args ka use karte h pahle to ye touple bana deta h apne data ko or fir loop chala kr ek banaye hue varible me dalte hue add kr ke sare arguments ka result de deta h example ke liye 
+ def total(a,b):
+	return a+b
+	
+def allTotal(*args):
+	total = 0
+	for i in args:
+		total += i
+	return total
+	
+print(allTotal(1,23,4,5,6))
+
+
+def mult(*args):
+	total = 1
+	for i in args:
+		total *=i
+	return total
+print(mult(2,3,4,5))
+# args dene ke baad yadi print me kuch na de to wo total ka value show karega pr ye kaam koi varible karne pr error dega.
+
+def toPower(num, *args):
+	if args:
+		return [i** num for i in args]
+	else:
+		return "You didn't pass any args."
+nums = [3,4,5]
+print(toPower(*nums))
+ to h he.
+ iske alawa isme ** argument bhi aata h jisko kwargs bolte h jiska mtlb keyword argument hota h. ye data ko dci me leta h. or * touple me leta tha. ex ke liye 
+ def func(**kwargs):
+	for k, v in kwargs.items():
+		print(f"{k} : {v}")
+		
+d= {"name" : "Shivam", "age" : "24"}
+func(**d)
+
+def fun(name, *args, lastName = "unknown", **kwargs):
+	print(name)
+	print(args)
+	print(lastName)
+	print(kwargs)
+fun("Mohit",1,2,3,a=1,b=2)
+
+
+#  isme 2 key dena h jisko wo reverse kare or 1st wala capital bhi kare jo ke for -1 se rev or title se capital ho jayega.
+def funci(l,**kwargs):
+	if kwargs.get("reverse_str")== True:
+		return [name[::-1].title() for name in l]
+	else:
+		return [name.title() for name in l]
+		
+names = ["mohit", "rohit"]
+print(funci(names,reverse_str= True))
+	
+
+
+ def me koi a, b,c kilha ho to wo normal argument hota h. or name = unknown isa likha ho to isko default parameters bolte h, ye yadi argument me kuch nhi hota h to default wala print kr deta h. iske baad aate h *args fir **kwargs. isko PADK se yaad kr sakte  h pahle parameter, args, default, fir kwargs dena hoga nhi to error aayega.
+ 
+ 
+ 
+ 				Chapter ===> 12 (Lambda Expression)
+ 				
+iska koi naam nhi hota is liye isko anonymous fucntion bhi bolte h. 12lamEx.py dekhe.
+
+
+				Chapter ==> 13 (Enumerate func, map function, filter function, zip function )
+ 
+ 
+ 
+ ye for loop ke saath use karte h apne list ya touple me i ka value ka position pata karne ke liye enumerate ka use karte h. ek me 
+ # simple tarika
+def add(a,b):
+	return a+b
+print(add(4,5))
+
+# ab lambda ka time
+add2 = lambda a,b : a+b
+print(add2(6,7))
+print(add) # location dega
+print(add2) # koi naam nhi dega    
+
+# even odd ka dono tarika
+def evod(c):
+	if c%2==0:
+		return True
+	else:
+		return False
+print(evod(6))
+# ek or tarika
+def evod2(d):
+	return d%2==0
+print(evod2(5))
+# ab lambda rule aata h.
+evod3 = lambda a: a%2==0
+print(evod3(7)) 
+
+
+ map function ---->ye function num se 1 1 kr ke list le raha h or squ me dale jaa raha h or calling time jisme dalna h or jisko dalna h dene pr kaam karta h ye kaam lambda se bhi ho sakta h.
+ Filter function ------> ye filter karne ka kaam karta h mtlb koi function ko even odd pata karna h to ye 1 varible lega or ek list lega check karne ke liye jisko koi touple me add kr ke print kara sakte h. 
+ name = ["bangali", "rohit", "mohit"]
+pos = 0
+for i in name:
+	print(f"{pos}------>{i}")
+	pos +=1
+	
+# using of enumerate
+for f, g in enumerate(name):
+	print(f"{f}----->{g}")
+	
+# simple h 2 varible diye f jo position dega or g jisme value name ka aayega or usko print kara lenge.
+
+def findPos(l, tar):
+	for f, g in enumerate(l):
+		if g ==tar:
+			return f
+	return -1
+	
+print(findPos(name,"mohit"))
+
+# isme ek list liye gaya h jisme diya hua varible ko check karega or mila to kitna pr h print karega nhi to simple -1 likh dega.
+
+
+# map function ---> ye function num se 1 1 kr ke list le raha h or squ me dale jaa raha h or calling time jisme dalna h or jisko dalna h dene pr kaam karta h ye kaam lambda se bhi ho sakta h.
+
+num = [1,2,3,4]
+def squ(a):
+	return a**2
+b = list(map(squ,num))
+print(b)
+
+# yahi kaam lambda se
+squ2 = list(map(lambda a:a**2, num))
+print(squ2)
+
+
+# yahi kaam list compheriension se
+squNew=[i**2 for i in num]
+print(squNew)
+
+# list bana kr
+newList = []
+for j in num:
+	newList.append(squ(j))
+print(newList) 
+
+# isme map se pahle me length pata kiye or name naam ke list me into kara gaya jisse kitna bada h pata chal gaya
+name2= list(map(len,name))
+print(name2)
+
+
+# filter function--->    isme ek numb def hua h jo return me even ko check kr raha h  ek list banaya gaya h jisko tuple me filter kiye gaye def ko list se dala gaya h or tuple ko print kara liye gaya h.
+# or isko lambda se bhi bina def ke kr sakte h direct 1 varible lena h or condition ko return kara kr list likh dena h jo ke next print me kiye gaya h .
+
+def numb(a):
+	return a%2==0
+numbr= [1,2,3,4,5,6,7,8,9]
+filt= tuple(filter(numb, numbr))
+print(filt)
+
+filt = tuple(filter(lambda a: a%2==0, numbr))
+print(filt)
+
+# zip 2 ya 2 se jyda ko zip karta h isko kise me bhi  zip kr sakte h.
+data1 = ["name1", "name2", "name3"]
+data2 = ["mohit", "rohit", "bangali"]
+data3 = ["tiwari", "tiwari", "paul"]
+print(list(zip(data1,data2,data3)))
+print(tuple(zip(data1,data2,data3)))
+print(set(zip(data1,data2,data3)))
+
+
+#iske alawa zip ko * use se unIp bhi kr sakte h.
+l = [(1,2),(3,4),(5,6)]
+print(list(zip(*l)))
+l1,l2 = list(zip(*l))
+print(list(l1))
+print(list(l2))
+for k in zip(l1,l2):
+	newList.append(max(l))
+print(newList)
+ or isko lambda se bhi bina def ke kr sakte h direct 1 varible lena h or condition ko return kara kr list likh dena h jo ke next print me kiye gaya h .
+ Zip function -----> zip mere list ko zip kr ke dega jo itrrator hoga jisko baar baar use kr sakte h. or isko list ya touple me bhi use kr sakte h. yadi 2 zip kiya gaya hua me first me 2 value h or next me 3 h to 2 he show karega. ye 2 se jyda bhi zip kr sakta h.
+  ek or aata h doc string jisko start or end dono ''' ya """ se kr sakte h. iska use user ko smghane ke liye kiya jata h ke mera function kya kitna lega or isko hum add.__doc__ se output me show bhi kr sakte h 13ex.py
+  
+  
+  
+  			Chapter===> 14 (Decoraters)
+  			
+ isme function ke ander ek or function bana kr auto square cube jise kaam kr sakte h iske alawa isko direct call karne ke liye @ use karte h jo ke 
+ # ek list bnana h jiska average nikalna h iska 2 tarika likha jaa raha h ek normal or ek lambda.
+def aveFinder(*args):
+	average = []
+	for i in zip(*args):
+		average.append(sum(i)/len(i))
+	return average
+	
+print(aveFinder([1,2,3],[4,5,6],[7,8,9]))
+
+# ab lambda rule se direct solve.
+averageFinder = lambda *args : [sum(i)/len(i) for i in zip(*args)]
+print(averageFinder([1,2,3],[4,5,6],[7,8,9]))
+
+
+# isme kuch number lena h jo add kr ke dega or yadi str de diya jaye to wrong type jisa kuch msg de.
+def allSum(*args):
+	"""ye hai """
+	'''doc '''
+	if all([(type(arg)==int or type(arg)==float) for arg in args]):
+		total = 0
+		for i in args:
+			total += i
+		return total
+	else :
+		return "Wrong Entry"
+print(allSum(1,2,4,6,7,"hhkjhk"))
+name= ["ram","shyam","dy"]
+print(max(name, key = lambda a:len(a)))
+print(min(name, key = lambda a:len(a)))
+print(allSum.__doc__)
+print(sum.__doc__)
+
+# __doc__ iska use hum apne program me kya doc me likha h wo pata kr sakte h jise yaha pr all sum ka doc dekh rahe h to isme jo msg likha h wo dekha raha h or ise he yadi hum sum jo ke pre defined method h iska bhi doc se detail bata raha h isme.
+ me use kiya gaya h isse define kiye function ko dushre function me call kr sakte h.	or yadi """ se doc ko print karaya jaye to wo decorate wala print karega apne define wala nhi karega ise me python me ek module hota h import (from functools imports wraps) naam ka mila h jisko import karne se ye sahi kaam karega.
+ or isme import time se time program run hone me kitna time laga wo bhi count kr sakte h bs code start se pahle time ko call or end hone time time ko call karna h or last me print kara lena h.
+ # isme isa decoraters bnana h jo function me bs int he le bole to yadi add ke time hum list ka string dal de to wo error deta h is kami ko sahi karne ke liye hum iska use kr sakte h.
+
+from functools import wraps
+def checkInt(function):
+	@wraps(function)
+	def wrappers(*args, **kwargs):
+		dataType = []
+		for i in args:
+			dataType.append(type(i)==int)
+		if all(dataType):
+			return function(*args, **kwargs)
+		else:
+			print("Wrong Argument")
+	return wrappers
+@checkInt
+def add(*args):
+	total = 0
+	for i in args:
+		total +=i
+	return total
+print(add(1,2,3,4,5,[6,7]))
+ me isa decoraters bnana h jo function me bs int he le bole to yadi add ke time hum list ka string dal de to wo error deta h is kami ko sahi karne ke liye hum iska use kr sakte h.
+ 
+ 
+ 
+ 				Chapter 15 (Generators)
+
+
+
+
+
+isme iterator or iterable ke bare me pahle baaata karenge. # loop chalne pr python koi bhi list ko iterator me change karta h. iterable ko hum iterator me change kr ke for loop laga sakte h. or generators ko iterator bolte h. list ke baar me he sara list ko memory me store karta h pr generator list ke 1 1 kr ke value ko 1 time pr leta h jisse ye performance bhi speed deta h list ke compare me. isko bnane ke liye generator function use karte h iske alawa generator comprehension ka bhi use karte h. isko call karne ke liye yield ka use karte h. generator cpmprehension use karne ke liye middle bracket lagana hota h  or list ke liye use [] hota h. gene vs list compare kare to  l=[i**2 for i in range(10000000)] bana kr isko run karate h or ise time me task manager me kitna memory leta h wo dekhte rahte h to pata chalega ye list bnane me 400mb tk chala jata h jo ke kafi jyda h or iske alag yahi program ko ( ) dal kr gen bana kr run karane me 0.0 sec lagta h or memory show tk  nhi karta h qke ye 1 time me 1 argument ko he create karta h.
+# loop chalne pr python koi bhi list ko iterator me change karta h. iterable ko hum iterator me change kr ke for loop laga sakte h. or generators ko iterator bolte h. list ke baar me he sara list ko memory me store karta h pr generator list ke 1 1 kr ke value ko 1 time pr leta h jisse ye performance bhi speed deta h list ke compare me. isko bnane ke liye generator function use karte h iske alawa generator comprehension ka bhi use karte h. isko call karne ke liye yield ka use karte h.
+
+def num(n):
+	for i in range(1,n+1):
+		yield(i)
+	
+for numb in num(10):
+	print(numb)
+	
+	
+# even odd wala kaam karna h gen ke use se
+
+def numbe(a):
+	for i in range(1,a+1):
+		if i%2==0:
+			yield(i)
+for i in numbe(10):
+	print(i)
+	
+	
+	
+# generator cpmprehension use karne ke liye middle bracket lagana hota h  or list ke liye use [] hota h.
+
+square = (i**2 for i in range(1,11))
+print(square)
+print(next(square))
+print(next(square))
+print(next(square))
+print(next(square))
+
+
+
+
+				Chapter 16 (Object Oriented Programming)
+				
+				
+				
+				
+oop ye to sare sahi programing me hota h isme class, object, or method ka baat hota h iska mtlb hum jo bhi class bnate h usko 1 category me dalte h jise koi list class bnate h to ab ye fix h ke usko data lega append pop karega or bhi jo jo kaam list me hota h wo kar sakta h ye to class hua or ab is list me jo data liye gaya h wo object h jise l1,l2 kitna bhi list le or isme kitna bhi iska value dale sara object he hoga ab ispr kya karna h bole to pop append ye sara method hota h. iske alawa python me sara kaam class pr he hota h pr ab appun log yaha khud ka class bnana sikhega. class ka 1st leter capital dena h fir : use karna h.
+isko bnane ke liye class define karte h or init ko call karte h __ laga kr qke init self call hota h or fir apne object ka naam self naam see dete h jo ke object ban jata h 
+oops me encapsulation hota h jiska method koi class me jo jo use hona h sabko ek pass he likhna capsul bana kr bole to yadi hum koi mobile ka brand price likhe h to kon kon sa mobile h ye sara 1 place pr likhna ya encapsule hota h or kuch ise mthod bhi hote h jo dekhana zaruri nhi hota h ke kya ho raha h isme jise kahi pr kuch print karana h ya koi funtion kise kaam kr raha h ye batana h to ise me abstraction ka use karet h.
+__name__ isko dunder method bolte h or magic method bhi bolte h ise he isme publice private nhi hota sab public hota h pr kuch code ko user cher-char nhi kare isko naming conversion bolte h __name ise likhte h.
+fir aata h mobile ke call aane jane brand price ye sab kuch hote h ye 1 class hua pr hum ek or class banaye jisme ye sare gun ho saath saath ismee ram camera or bhi smart phone ke jo gun hote h wo bhi ho to ek ka gun dushre me hone ko he inherritence bholte h or ek ka gun dushre me lene time code repeat na ho is liye class bnanee ke baad bs () isme old class dal dete h or init me sara object banate h self ke saath fir next line me super().__init__(isme parent ke uskarne wale object bina self ke) dal dete h bs ho gaya. or ek or class bana kr usme 2nd wale ka naam de kr upper ke dono ka value ko lene ke process ko multilevel inheritence bolte h.
+MRO ka mtlb method resolution order hota h bole to kon sa class kis order me use ho raha h isko dekhne ke liye print(c.__mro__) ya or detail me dekhne ke liye print(help(Smartphone)) ka use karte h.
+Multiple Inheritence bole to 2,3 class ko 1 me add karne ko multiple bolte h isko kuch nhi karna h direct class Name(class1,class2): kuch ise dena h fir ho gaya.
+Magic Methods---> jinke aage or piche dono taraf __ laga hota h unko magic/dunder methods bolte h. init, str or repr ye dono bhi dunder method h or dono ka kaam same he h. jise koi 2 string ko add karna h to ye direct to add hoga nhi to ise me define me __add__ kr ke add kara sakte h. def __add__(self, other) or return  saelf.price+price ye add karne ka kaam karega. 
+plymorfism bole to ek he class ye operatro se 2 kaam karne ko bolte h bole to 1+2 add hoga pr r+am ram hoga jisko concartinate bolte h to yahi 2 kaam karne ko polymorphism bolte h 				
+				
+ 				
+ 				
+ 		More Details OOPS
+
+'''class, object(instance), method, jo bhi blue print me likhtee h class hota h jisko bada likhna hota h convension ke hishab se 
+isme jo bhi function lagate h sara method he hota h
+isko use karte h wo object hota h.
+class me pahle () lagate the pr ab : lagaya jata h
+init ko constructor bolte h. self ke baad jo bhi data dete h wo attribute hota h.
+ye attribute  jisko self.object ke saath define karte h.
+object bole to a = className('name', 'age')
+yaha a object h self apne object ko repersent kr raha h init me defalut self dete h jisko is type se prove kr sakte h yadi hum attributes ko self se connect se pahle he koi msg de dete h or jisna object ko print karate h sara times wo msg show hoga jo he bata raha h ke apna init baar baar call ho raha h.
+self.koi bhi name = define name isa dete h bole to () dala hua ko = ke baad dete h or self e saath koi bhi likh sakte h or usko he call time bulana hoga qke iska mtlb he hota h ke ab mere attribute ka value apne object ke call me aa raha h.
+self.name = name + '' + age ye ab ek saat do do attribute rakha hua h. 
+class me difine sare part ko methods bolte h.
+__dict__ ye apne dict ke jisa hota h bole to iske use se hum apne object ke kya kya h dekh sakte h.
+yadi mere ko circle ka paranthesis nikalna ho to self.pi = pi dena hoga or apne object me circle(5, 3.14) dena hoga jo ke slow or time lega to iske liye apne class me variable define karte h bole to class define ke baad bs pi = 3.14 de dete h or self wale me pi ko define nhi karte h or direct return me 2*Circle.pi*self.radius dete h yaha circle apne class ka naam h or pi variable ko define kiya gaya h.
+next aata h class method iske use ke liye apne decorators ko call karte h or isme self na de kr className dete h. @classmethod kuch ise call karte h.
+.__name__ iska use apne class ka name dekhne ke liye kar sakte h bole to mere ko class ka naam pata karna h to {object.__name__} isa kar class naam bhi dekh sakte h.
+koi object ('','','') ise hota h pr yadi mere ko (', , , ') kuch isa dena h to apna khud ka init method bnana hoga jo ke hum apne class method se banate h. qke ab mere ko apna init ko define karna h iske liye apne ko class method bnana hota h jo ke (cls) fir def me fromString(cls, string) lega or isko first, last, age = string.split(',') se connect kr denge or isko return me cls(first,last, age) isa return kara denge ye ban gaya apna class method isko call direct nhi kr sakte nhi to apne python ka default run ho jayega iske liye  apne ko className.fromString() ise call kr ke use me le sakte h.
+object method me self or class method me cls dena hota h pr ek static method bhi hoa h jiska dono se kuch lena nhi hota h or ye self,cls bhi nhi leta h bs isko apne @staticmethod se call karte h or simple h apne define me koi msg de sakte h isko is liye banate h qke jab mere ko apne class ka kahi koi logacaly operation dena hota h to iska use karte h. isko call karne ke liye bhi class. staticName is call karte h.
+Encapulation ----> ek he type ke data ko ek he place pr rakhne ko encapulation bolte h bole to yadi mere pass phone h to iska software ke function ko ek he place pr rakh dete h or ise he yadi  ye hardware se related koi kaam kr rahe h to ise me isko ek place pr rakh dete h isko he encapulation bolte h.
+
+Abstraction ----> iska example kuch isa h ke python me list naam ka ek default class hota h or hum log jo variable banate h do object hota h yadi mera data 3,2,5,1 ise ho or hum sort method ko use karte h to ye mere ko shot kr ke de deta h pr sort bhi kafi type ka hota h jise alphabet number or bhi kafi type ka pr hum jab sort dete h to ye apna kis type ka hota h ye show nhi kr ke direct apna function dekhata h isko he abstraction bolte h bole to waisa data jo user ke liye zaruri nhi h usko hide karne ko abstraction bolte h. 
+
+inheritance -----> 1 line me bole to child parent wala rule isme he aata h bole to yadi mer pass ek mobile ka class h jo ke call kr sakta h or ek new class h jo ke smartphone h to ab isme call to hoga he iske alawa net bhi hoga ram bhi hoga camera bhi hoga to hum smart phone me call bulane ke alawa hum direct apne purane phone wale gun ko apne  smartphone wale me bula sakte h isa karne se apna dry follow hota h or in sare methods ko dubara call nhi karna padega  or yadi mere ko inherit karna h to apne class Name(oldClass):  mainClass.__init__(self. isme ka sara value) ek ye tarika se call kr sakte h nhi to super().__init__(value ka list) isme self nhi dete h bs yadi kaam ka baat h
+ek paretn ke 2 ya jyda child bhi ho sakte h ise he ek parent class ko 2 ya 2 se jyda me bhi derive kr sakte h method ko he function bolte h 
+mulit inheritance bole to apne parent ko chiled me bulana or fir isko koi or class me call karna isko multilevel inheritance bolte h iska bhi simple h class(name): def __init__(self, or pahle to purana wala fir or new kya add ho raha h wo bhi) fir super().__init__(purana wala sara call karna hoga ) fir self.new wala jo bhi aaya h usko bhi de dena h ho gaya.
+method resolution order : bole to ye btata h ke apna python kis order me apne class ko search kr raha h iske use ke liye print(help(className)) 
+overwride > bole to yadi mere ek class me koi define kiye hua method bana hua h or usko hum inherite kiye hue he or same us naam se he mere child me ek or method bana hua h to ab hum yadi apne child wale class ko call karenge to ye new bana hua method ko call karega or yadi parent wale ko call kare to ye purane wale ko call karega yaha mere pahle se difine wale ko call na kr ke new wale ka return aa raha h isko he overwride bolte h. ab yadi hum multilevel inherit kr rahe h to usme is naam ka method call karenge to wo mer eko child wala return karega isa is liye qke wo pahle apne me dekhega or usko waha nhi milega to wo just upper jayega or waha usko overwride wala mil jayega is liye wo wahi wala call kr dega wo or upper tk jaa he nhi payega.
+isinstance(objectName, className) ye check karta h ke hum jo object diye h wo apne kis class me h isa check karne ke liye hum iska use karte h.
+issubclass(className, MainClass) ye bata raha h ke kya mera koi bana hua class mere main class se h ya nhi. is liye pahle banaya hua dete h fir main class dete h or yadi hoga to true dega nhi to false dete h.
+multiple inheritance > iska mtlb bole to 2 class bana ho je ke dono ek dushre se alag ho or koi or class jisme isko use kr rahye h to iske liye className(A,B) to ab ye dono class ko apne pass rakhega or dono class ka kaam karega or yadi hum ek he naam ka define dono me kiye h to ye apne method resolution wale method se pahle apne me fir A me fir B me jayega or isko jaha mil jaye pahle wahi wala run kara dega ab aata h to fir  mere ko next wala print karana h to kise hoga iske liye apne className(B,A)isa kr denge to ab ye B fir A ko check karega.
+method resolution order ko help ke alawa hum mro se bhi use kr sakte h bs  className.mro or isko print kara dete h ye bhi de dega ya to hum dunder ka bhi use kr sakte h wahi same h className.__mro__ or isko print kr dena h.
+
+
+
+method overloading is called polymorphism jise mere pass koi shape jise rectange ya square ya circle me color karna h to hum sare shape ke liye ek he color method ko use kr rahe h to ek he method ko overloading karna polymorphism hota h.
+class Parrot:
+class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am a cat. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("Meow")
+
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am a dog. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("Bark")
+
+
+cat1 = Cat("Kitty", 2.5)
+dog1 = Dog("Fluffy", 4)
+
+for animal in (cat1, dog1):
+    animal.make_sound()
+    animal.info()
+    animal.make_sound()
+    animal.info()
+    
+isme hum make_sound or info naam se dono me define kiye h or last me cal1 me cat wala quality or dog1 me dog wala quality dale h to ab cal1 call karne pr cat1 wala make_sound call hoga or dog karne pr dog1 wala quality call hoga isfunction ko he polymorphism bolte h.
+
+Abstract Class: iska object nhi create kr sakte h. 
+Encapsulation= oops me kuch funcion work karta h pr ye kise work karta ye show nhi karte is process ko he encapsulation bolte h jise python me shot define h jo ke apne list ko sort karne ka kaam karta h sort kafi type ke hote h buble sort reverse sort pr ye is function ko call karne pr direct result deta h to apne is process ke data ko hiding ko he encapsulation bolte h.
+
+abstraction = data hiding ko abstraction bolte h ye work karega pr kise work kr raha h isse user ko lena nhi hota h.
+
+__init__ isko constructer bolte h jo ke khud call hota isme jo function call karte h isko attributes bolte h.
+'''		
+ 				
+ 				oops Examples...
+ 				
+ 				# isme kahani kuch isa h ke class ka 1st bada convension ke hishab se rakh sakte h : use karna h isme kuch define karna h jo self likha h wo p1 ya p2 jo bhi ban raha h waha use hoga or sara value aayega.
+# isme + ka use kr ke ek saath 2 value ko bhi store kara sakte h.
+# or self ke use se koi bhi dif me self dene pr wo dierct check kr sakta h jo ke age me diya hua h ek or baat define ko print me () dena hota h or value wala direct likha hota h jo bhi diya  hua h 
+class Name:
+	def __init__(self, firstName, lastName, age):
+		self.firstName=firstName
+		self.lastName=lastName
+		self.age=age
+		self.full_name=firstName+" "+lastName
+		
+		
+	def fullName(self):
+		return (f"{self.firstName} {self.lastName}")
+		
+	def ageCheck(self):
+		return self.age>18
+p1= Name("Mohit","Tiwari",24)
+print(p1.firstName)
+p2=Name("tathagat","kumar",10)
+print(p2.age)
+print(p1.full_name)
+print(p2.fullName())
+print(p2.ageCheck())
+
+# ek program jisme diye humber ka discount karne ke baad kitna hua batayega.
+class Dis:
+	def __init__(self, price):
+		self.price=price
+		
+	def disc(self, num):
+		offPrice= (num/100)*self.price
+		return self.price-offPrice
+		
+a1=Dis(1200)
+print(a1.disc(10)) 
+
+# is program me phone class bana h jisme kuch problem ko solve kiya gaya h jise proce -ve na ho is liye max ko lagaya gaya h. ise he complete sqecification batane ke liye isko define kiya gaya h taki last me jo update kiya gaya h price wo print kare. isme ke property decorater ko use kiya gaya h jo ke koi bhi function ko call karne ke baad () lagana hota tha pr isko call karne ke baad isa nhi karna hoga jo ke number 25 me dekhaya gaya h.
+
+class Phone:
+	def __init__(self, brand, modelName, price):
+		self.brand= brand
+		self.modelName= modelName
+		self.price= max(price,0)
+		
+	@property
+	def compSpe(self):
+		return  f"{self.brand} {self.modelName} {self.price}"
+
+	
+	def cal(self, brand, modelName):
+		print(f"calling {phoneNumber}...")
+		
+	def fullName(self):
+		return f"{self.brand} {self.modelName}"
+		
+# inheritence class
+class Smartphone(Phone):
+	def __init__(self, brand, modelName, price, ram, internalMemory, camera):
+		super().__init__(brand, modelName, price)
+		self.ram=ram
+		self.internalMemory=internalMemory
+		self.camera=camera
+		
+phone1= Phone("Nokia", "1100", -1000)
+print(phone1.brand)
+print(phone1.modelName)
+phone1.price=-500
+print(phone1.price)
+print(phone1.compSpe)
+
+# method resolution sabhi class ka hota h isko dekhne le liye ise he method override apne banaye hue dif comSpe ko modifide kr sakte h koi or chile wale me. 
+#print(help(Smartphone))
+#class C(Phone, Smartphone):
+#	pass
+	
+
+ 
+ 				
+ 				Chapter 17 (Errors Details)
+ 				
+ 				
+
+
+
+syntax error---> syntax sahi na likhne pr ye aata h bole to def func ke last me : nhi lagane se ye error aa sakta h.
+indentation errors ---> loop ya if else chalate ke baad tab dena hota h pr kabhi -kabhi galti se kmm spece ya tab ho jata h to ise me indentation error deta h.
+name error---> yadi koi name define nhi kiye ho or usko print ka koi use me lene pr name error dekhata h.
+type error---> galat operation karne pr deta h bole to 1+ ram likhne me ye gali na de kr type error bolta h. pr 3* ram likhne pr ye ramramram likhega ye error nhi hoga.
+index error ----> koi list bana kr usme 3 value denge pr print me 4 ka value mangne pr wo is type ke error ko deta h.
+value error----> ek s= "ram" de kr ab insko int(s) print karane pr ye deta h qke number ko string ya integer me change kr sakte h pr abc int me nhi hoga is liye isa dega.
+
+attribute error----> ek list bana kr koi isa operation karne pr jo usme h he nhi to ye error dega jise pop hota h pr push nhi hota h ab l.push("12") likhne pr ye dega.
+key error-----> decinory me name key de pr search time age key ka use kare jo h he nhi to is time ye error aayega.
+raise error bole to user kuch galat entry kare to error type ka msg dekhana bole to 1+2 3 hoga pr "1"+"2" ye 12 hoga yadi isa ho to apne ko wrong input jisa kuch output de. bs raise TypeError(msg) dena h ho gaya
+
+# Ecxeption Handling -> yadi value error hota h bole to mere ko int dena h or koi char de deta h to program run hota h pr resunt na de kr error deta h jiske liye isko use karte h.   iska 1st method hota h tr except isme jaha se error hone ka chance hota h waha isko lagaya jata h or jis type ka error aane wala hota h wo wala except me error de kr koi work karaya jata h.  except kafi time de sakte h uske baad aata h else iska use apna try function jyda long na ho is liye karte h or ye try ke sahi input hone ke baad run hota h fir ek last aata h finally ye try sahi ho ya galat bole to except me ho ya try me dono me all time call hoata h.
+custom exception- ye khud se apne program me error bnane ka rule hota h jise mere ko 5 charecter ka naam print karana h pr hun input 4 ka kiye to hum chahte h NameTypeError isa raise kare to ise me is naam ka ek def karenge jisme apne real error jise ValueError ko pass kara denge jo ke iska actual error hoga or ab isme return kuch nhi kara ke direct pass kr denge ho gaya.
+# Debuging Error-> Isme koi program likha hoga h pr usme kuch error hote h jisko pata karne ke kuch tarike h jise 1-1 sare line ko run karana or jaha galat hoga waha error show karega nhi to ek or tarika h import pdb module ka use kr ke. import pahle se python  me define kiye hua module h jo call karne pe apne function ko use karne ka option deta h. ab pdb ko use karne ke bhi tarika h jise isko kise line pr pdb.set_trace() isa likh dene pr wo wahi se trace karna start karega. ab isko run karane pr ye ruk jayega or waha se iska operation start hota h l se list check karta h n se next line pr jata h q se quit kr sakte h c se debug dekhne ke baad wahi se aage ka run karne ke liye c use karte h.
+isme ek program banaya gaya h jo ek html se jitna bhi link h wo koi or page me lega jiske liye simple h <a href= ke baad sara link hota h to hum pahle demo.html ko open karenge webpage me fir koi text3 page me append karenge wf se fir for loop laga kr apne webpage ko read karenge or yadi usme <a href= milta h to koi file me find use kr ke rakh lenge fir koi or varible me us line ke find ko copy karte hue next line ke saath bhi yahi karenge +1 laga kr taki same link print na ho bir koi rul varible se in line ko lenge or write function se print kara lenge koi or page me.
+
+Example:
+# Debuging Error-> Isme koi program likha hoga h pr usme kuch error hote h jisko pata karne ke kuch tarike h jise 1-1 sare line ko run karana or jaha galat hoga waha error show karega nhi to ek or tarika h import pdb module ka use kr ke. import pahle se python  me define kiye hua module h jo call karne pe apne function ko use karne ka option deta h. ab pdb ko use karne ke bhi tarika h jise isko kise line pr pdb.set_trace() isa likh dene pr wo wahi se trace karna start karega. ab isko run karane pr ye ruk jayega or waha se iska operation start hota h l se list check karta h n se next line pr jata h q se quit kr sakte h c se debug dekhne ke baad wahi se aage ka run karne ke liye c use karte h.
+import pdb
+pdb.set_trace()
+name = input("Enter a Name : ")
+age = input('Enter your age : ')
+age2 = (age) + 5
+print(f"{name} 5 Years ke baad tu {age2} ka ho jayega.")
+
+# Ecxeption Handling -> yadi value error hota h bole to mere ko int dena h or koi char de deta h to program run hota h pr resunt na de kr error deta h jiske liye isko use karte h. 
+#  iska 1st method hota h tr except isme jaha se error hone ka chance hota h waha isko lagaya jata h or jis type ka error aane wala hota h wo wala except me error de kr koi work karaya jata h.  except kafi time de sakte h uske baad aata h else iska use apna try function jyda long na ho is liye karte h or ye try ke sahi input hone ke baad run hota h fir ek last aata h finally ye try sahi ho ya galat bole to except me ho ya try me dono me all time call hoata h.
+while True:
+	try:
+		age = int(input("Enter your Age : "))
+	except ValueError:
+		print("Invailed option")
+	except:
+		print("kise ise kise karte h aap")
+	else:
+		print(f"User Input = {age}")
+		break
+	finally:
+		print("*..................*")
+if age < 18:
+	print("You can\'t play this game...")
+else:
+	print("you can play this game...") 
+	
+	class Animal:
+	def __init__(self, name):
+		self.name = name
+		
+	def sound(self):
+		raise NotImplementError("you have to define this method in subclass") 
+		
+class Dog(Animal):
+	def __init__(self, name, breed):
+		super().__init__(name)
+		self.breed = breed
+		
+	def sound(self):
+		return "Bhow Bhow"
+		
+class Cat(Animal):
+	def __init__(self, name, breed):
+		super().__init__(name)
+		self.breed = breed
+		
+doggy = Dog("boony", "pug")
+print(doggy.sound())  
+
+# yaha pr Animal parent class h jo ke name le raha h or sound dog ka define h pr cat ka nhi to hum yadi cat ko call karenge to ye error dega or error me raise error generate karega.
+
+
+
+
+ 				Chapter 18 (file handeling)
+ 				
+ 				
+Read Method -->isse hum apne same folder me file ke saath operation kr sakte h jise read karna write karna or bhi open se file open hota h close se close fir file ka naam dena h fir kis position me dena h wo bhi likhna hota h yadi koi form nhi de rahe h to wo auto read form me hota h seek method se cursor ka position set karte h tell() method se cursor ka position pata kr sakte h ke wo kaha h. readline method se hum 1-1 line read kar sakte h. readlines() se hum apne file ko ek list me dal sakte h jaha jaha line change hoga \n ho jayega fir ispr loop laga sakte h ya iska len() method se length bhi pata kr sakte h. or kabhi-kabhi 2 line ke bich me jyda gap ho to end="" dene se wo sahi ho jata h. name se file ka name dega or closed se check kr sakte h apna file close h ya nhi yadi close hoga to true nhi to false value dega ex ke liye 
+# isse hum apne same folder me file ke saath operation kr sakte h jise read karna write karna or bhi open se file open hota h close se close fir file ka naam dena h fir kis position me dena h wo bhi likhna hota h yadi koi form nhi de rahe h to wo auto read form me hota h seek method se cursor ka position set karte h tell() method se cursor ka position pata kr sakte h ke wo kaha h. readline method se hum 1-1 line read kar sakte h. readlines() se hum apne file ko ek list me dal sakte h jaha jaha line change hoga \n ho jayega fir ispr loop laga sakte h ya iska len() method se length bhi pata kr sakte h. or kabhi-kabhi 2 line ke bich me jyda gap ho to end="" dene se wo sahi ho jata h. name se file ka name dega or closed se check kr sakte h apna file close h ya nhi yadi close hoga to true nhi to false value dega
+# with jyda use hone wala method h file handeling ke liye isko use karne ke liye   with open ('file name') as jisme copy karna h: dena h fir data = f.read() ya jo function use karna h kr sakte h. isme f.open ya f.close nhi karna hota h ye auto kr deta h. isme file ko write karne ke liye w r+ or a ka use kr sakte h. w mode data= f.write("hello") isko use karne se ye apne purane sare data ko del kr ye write me jo likha h wo print kara ke dega. a ke use append ke liye hota h apne file me bacha hua data me or add karne ke liye iska use hota h or ye dono ko dekhne ke liye file ko khol kr dekhna hoga. r+ mode ka use read write dono ke liye karte h iske use se purana wala waha tk del ho jata h jaha tk write karna hota h ise me f.seek(len(f.read())) isa use kr sakte h ye cursor ka position batayega uske len utna read kr ke or last me rok dega fir write isko write kr dega.
+# ek saath dono kara sakte h isme ek baar me file2.txt ko read kiya gaya h or fir file1.txt me usko write kiya gaya h.
+
+loop= int(input("Enter a Number : "))
+if loop==1:
+	f= open('pClass.doc')
+	print(f'cursor position : {f.tell()}')
+	print(f.read())
+	print(f'cursor position : {f.tell()}')
+	f.seek(0)
+	print(f'cursor position : {f.tell()}')
+	print(f.readline())
+	lines = f.readlines()
+	print(len(lines))
+	print(f.name)
+	print(f.closed)
+	f.close()
+elif loop ==2:
+	with open('file.txt','w') as f:
+		 data=f.write('hello')
+		 print(data)
+		
+elif loop ==3:
+	with open('17raiseError.py') as f:
+		data=f.read()
+		print(data)
+		
+elif loop==4:
+	with open('file.txt','a') as f:
+		data=f.write('kya kr rahe ho?')
+		print(data)
+	
+elif loop==5:
+	with open('file.txt','r+') as f:
+		f.seek(len(f.read()))
+		f.write('lets check ho raha h ke nhi')
+		
+else:
+	with open('file2.txt','r') as rf:
+		with open('file1.txt','w') as wf:
+			wf.write(rf.read()) 
+			
+			
+with jyda use hone wala method h file handeling ke liye isko use karne ke liye   with open ('file name') as jisme copy karna h: dena h fir data = f.read() ya jo function use karna h kr sakte h. isme f.open ya f.close nhi karna hota h ye auto kr deta h. isme file ko write karne ke liye w r+ or a ka use kr sakte h. w mode data= f.write("hello") isko use karne se ye apne purane sare data ko del kr ye write me jo likha h wo print kara ke dega. a ke use append ke liye hota h apne file me bacha hua data me or add karne ke liye iska use hota h or ye dono ko dekhne ke liye file ko khol kr dekhna hoga. r+ mode ka use read write dono ke liye karte h iske use se purana wala waha tk del ho jata h jaha tk write karna hota h ise me f.seek(len(f.read())) isa use kr sakte h ye cursor ka position batayega uske len utna read kr ke or last me rok dega fir write isko write kr dega.
+ek saath dono kara sakte h isme ek baar me file2.txt ko read kiya gaya h or fir file1.txt me usko write kiya gaya h.
+bada file hone pr 1 time me sara data screen me aane pr achha nhi lagta h ise me hum data=f.read(100) kitna charecter read karna h ka value bhi de sakte h. kabhi-kabhi emoji pthon run nhi karta h to ise me with open('fileName.txt','r',encoding='utf-8') isa dene pr wo work karega.
+kise bhii iterator me loop chala sakte h pr fir uspr loop chalane pr wo dubara print nhi karega qke ye 1 baar he chalta h ise me hum apne iterator ko pahle list me dal sakte h simple list(iterator) or iska value koi varible me le kr us varible pr loop chala sakte h or jitna times run kara sakte h.
+csv file bole to ye jise doc, txt hota h waise he koi file jiska extension csv hota h usko bolte h. iska mtlb comman saperated values hota h bole ko comman se koi ko jodna bole to apna hedding me name, email, phone isa likha ho or niche iska value likha ho to python me for loop laga kr ye print kara sakte h or ye values ko dekh sakte h.
+csv ka mtlb to pata he h pr iska use hum program se koi data jise name ka scalery ka dekhna h ya bharna h to ise me isko use kr sakte h. isko hum 1 line me bhi bana sakte the bs csvWriter.writerows([['name','data'],['name1','data1'],['name2','data2']]) kuch ise bhi kr sakte h 18csv.py
+ 				
+ 				
+ 				
+ 				OS Module(Note : ye sara kafi important h or thora dhyan se kare qke mera kafi error aa raha tha karne me.)
+ 				
+ 				
+ 				
+import os moudle se use se he hum apne file ke saath ka sara kaam kr sakte h jise exe check karna copy cut karna folder file bnana or bhi in type ke operation is moudle se kiya jata h.
+#os.getcwd()----> ye current working directory deta h.
+#os.mkdir('folder')--> ye ek folder bana kr dega same location pr pr yadi isko fir se run kara denge to already exist isa bolega qke same naam ka create nhi karega dubara.
+#os.path.exists('movies')---> ye check karta h ke movies naam ka folder h ke nhi current path me yadi hua to true nhi to false msg printt karega or koi or directory ka pata karna h to movies ko replace kr ke apna directory dena hoga.
+#open('file.txt','a').close()---> ye file create karta h or ise karne se yadi isa file ho to error ka msg bhi nhi deta h.
+ #os.mkdir me hum path de kr koi or drive me bhi folder create kr sakte h.nhi to hum cwd ko change bhi kr sakte h bs yaad rakhna hoga ke \ window or / linux ke liyee use hota h koi or directory me jane ke liye.
+#os.chdir() or isme hum jaha bnana chahte h wo path de denge to bhi folder ban sakta h.
+ #os.listdir()---> ye apne sare file ya folder ka list dega.
+ # os.path.join(os.getcwd(),item)---> ye 2 path ko join karnee ka kaam karta h. or isko kise varible me store kara kr paint kara sakte h.
+(18osModule.py) isme ek program banaya gaya h jisme os module ko import kiya gaya h ab ye current working directory lega fir ek method hota h os.walk jisko hum path denge or ye ek iterator dega jispr loop laga sakte h ab ispr loop laga kr 3 varible bana kr apne current path, folder name, file names ko print kara sakte h. walk 1 baar me 3 chiz deta h ise liye 3 varible he lete h. os.rmdir() se hum koi folder ko del kr sakte h bs wo empty ho. ise he os.makedirs('new/folder') ye folder ke ander folder bana kr de sakta h.
+shutil.rmtree('folder') ye current dir se folder ko del kr sakta h empty nhi ho to bhi or ye permanent del karta h.
+shutil.copytree('folder ka path','jaha copy karna h waha ka path') ye copy karne ke kaam aata h or saath he remane bhi kr sakte h.
+shutil.copy('kisko copy karna h with extension','kaha copy karna h withpath/name.txt') ye file ke copy karne me use hota h.
+shutil.move('file.txt','dir/rename.txt') same iska bhi h. or folder ke saath bhi isa he karna h.
+
+Some Examples with Explanation:
+
+# csv file dict jisa bhi bana sakte h bs csv se import karna h dictWriter me or
+
+from csv import DictWriter
+with open('file6.csv','w') as f:
+	csvWriter= DictWriter(f,fieldnames=['firstName','lastName','age'])
+	csvWriter.writeheader()
+	csvWriter.writerow({
+		'firstName':'Mohit',
+		'lastName':'Tiwari',
+		'age':'123'
+	})
+	csvWriter.writerow({
+		'firstName':'Mohit',
+		'lastName':'Tiwari',
+		'age':'123'
+	})
+	csvWriter.writerow({
+		'firstName':'Mohit',
+		'lastName':'Tiwari',
+		'age':'123'
+	})
+	csvWriter.writerows([
+		{'firstName':'Rohit','lastName':'Tiwari','age':'456'},
+		{'firstName':'Rohit','lastName':'Tiwari','age':'456'},
+		{'firstName':'Rohit','lastName':'Tiwari','age':'456'}
+	])
+
+
+with open("demo.html",'r') as webpage:
+	with open('text4.txt','a') as wf:
+		page= webpage.read()
+		linkExist = True
+		while linkExist:
+			pos = page.find('<a href=')
+			if pos == -1:
+				linkExist = False
+			else:
+				firstQuote = page.find('\"',pos)
+				secondQuote = page.find('\"',firstQuote+1)
+				url = page[firstQuote+1:secondQuote]
+				wf.write(url + '\n')
+				page = page[secondQuote:]
+				
+				
+				#isme ek program banaya gaya h jo ek html se jitna bhi link h wo koi or page me lega jiske liye simple h <a href= ke baad sara link hota h to hum pahle demo.html ko open karenge webpage me fir koi text3 page me append karenge wf se fir for loop laga kr apne webpage ko read karenge or yadi usme <a href= milta h to koi file me find use kr ke rakh lenge fir koi or varible me us line ke find ko copy karte hue next line ke saath bhi yahi karenge +1 laga kr taki same link print na ho bir koi rul varible se in line ko lenge or write function se print kara lenge koi or page me.
+with open('demo.html','r')as webpage:
+	with open('text3.txt','a') as wf:
+		for line in webpage.readlines():
+			if '<a href=' in line:
+				pos = line.find('<a href=')
+				firstQuote = line.find('\"',pos)
+				secondQuote = line.find('\"',firstQuote+1) 
+				url = line[firstQuote+1:secondQuote]
+				wf.write(url+ '\n')
+
+
+# python me photo ka extension change karna resolution high low karna color brightness sab karne ka option bhi hota h pr ye python me aata nhi h isko pip se install karna hoga jo khud se karo. pr sahi baat ye h ke ye linux me internal hota h is liye isko hum direct use kr sakte h. from PIL  import Image se import karte h
+#Image.open('image ka naam') ko koi varible me le kr fir usko img.save('new extension ya pdf ') me bhi change kr sakte h.
+#img1.show() ye apne default image viwer se help se show karata h.
+# iske alawa hum iska size bhi de sakte h koi varible me or img1.thumbnail(var) fir img1.save('name') se iska resolution bhi km kr sakte h.
+# iske blur ka color ko bhi change kr sakte h iske liye ek or module import karna hoga ImageEnhance fir enha=InageEnhance.Sharpness(img1) enha.enhance('value').save('new name') o se blur ho jata h 1 actual image dega 2 thora sharp or ise he aage ka number sharp karte jayega. ise he Sharpness ko replace kr ke color dena hoga or 0 dene pr black and white 1 actual or ise he value jyda karne pr badhte jayega. Brightness ka bhi samee h 0 se black ho jayega or 1 actual or next se or badhte jayega.
+from PIL import Image , ImageEnhance
+img1 = Image.open('i.jpg')
+#img1.save('j.pdf')
+#img1.show()
+#maxSize=(250,250)
+#img1.thumbnail(maxSize)
+#img1.save('i1.jpg')
+enhancer = ImageEnhance.Sharpness(img1)
+enhancer.enhance(2).save('iii.jpg')
+
+#ek folder jiske ander kuch folder ho or usme video music etc ho to isko pata karna h uska path uske ander ka path path me kya kya h dept level ka detail jo ke os.walk se kiya jayega.
+import os
+os.chdir(r'/media/root/Basic Files/python')
+fileiter= os.walk(r'/media/root/Basic Files/python')
+for currentPath, folderName, filenames in fileiter:
+	print(f'current Path : {currentPath}')
+	print(f'Folder Name : {folderName}')
+	print(f'File Names : {filenames}')
+
+
+
+			(Image ke saath)
+			
+python me photo ka extension change karna resolution high low karna color brightness sab karne ka option bhi hota h pr ye python me aata nhi h isko pip se install karna hoga jo khud se karo. pr sahi baat ye h ke ye linux me internal hota h is liye isko hum direct use kr sakte h. from PIL  import Image se import karte h
+Image.open('image ka naam') ko koi varible me le kr fir usko img.save('new extension ya pdf ') me bhi change kr sakte h.
+img1.show() ye apne default image viwer se help se show karata h.
+iske alawa hum iska size bhi de sakte h koi varible me or img1.thumbnail(var) fir img1.save('name') se iska resolution bhi km kr sakte h.
+iske blur ka color ko bhi change kr sakte h iske liye ek or module import karna hoga ImageEnhance fir enha=InageEnhance.Sharpness(img1) enha.enhance('value').save('new name') o se blur ho jata h 1 actual image dega 2 thora sharp or ise he aage ka number sharp karte jayega. ise he Sharpness ko replace kr ke color dena hoga or 0 dene pr black and white 1 actual or ise he value jyda karne pr badhte jayega. Brightness ka bhi samee h 0 se black ho jayega or 1 actual or next se or badhte jayega. 				
+ 				
+
+
+
+					tkinter(create gui apk)
+					
+					
+					
+					
+# gui program bnane ke liye iska use hota h sabse pahle to isko import karna hota h fir 1 naam dena hota h tk() se fir us naam ko mainloop() karna hota h taki wo close na ho or screen pr on rahe. ab iska naam dene ke liye titel('name') ka use karte h  kuch likhne ke liye Label me pahle to banaye hue varible ka naam , text me kya msg dena h or usko .pack ya grid se split karte h pack center me likhta h jabki .grit row column leta h.
+# tk or ttk dono ka same he kaam h bs thora design ka farak hota h lebel bnane me name label bnane ke liye pahle koi label ko bulana fir apne main page ka naam text me kya likhna h fir .grid se kya position hota h dena hota h. or box bnane ke liye page ka naam width kitna bada ho or uska value kaha store ko textvariale me fir position dena hota h or ek store karne ke liye identity karna hota h ke kis type ka variable h.
+# ab sumbmit karne ka tarika bs btn bnana h kis page me kya likha ho or kya kaam kare ka address fir location ab connand ka def kr dena h .get() laga kr bs ho gaya.
+# combobox bnane ke liye bs ttk.Combobox likhna h jisko kitna long karna h dena h or uska value kis variable me dena h or state me read only ho isa likh dena h isa karne se usme type nhi hoga kuch or .grid ko kabhi kabhi last me bhi likhna chahiye qke grid se pahle bhi kabhi-kabhi koi action aata h jise focus isko baad me karne se error deta h is liye last me likh dena chahiye. ab apna combobox empty dekh raha h usme koi value pahle se bhara ho iske lie .current(koi value jo box me likha ho) de dene se wo auto aa jata h.
+# radio button bole to paha he h koi 1 select ho bnane ke liye tt.Radiobutton or isme iska value dena h jisme kya likha ho uska value kya ho or kaha store karna h dena hota h
+userType=StringVar()
+radoBtn1=ttk.Radiobutton(win, text='Student', value='Student', variable=userType).grid(row=5,column=0)
+radoBtn2=ttk.Radiobutton(win, text='Teacher', value='Teacher', variable=userType).grid(row=5,column=1)
+ Check button tick karne ko hota h kabhi kabhi ye bada ho jata h to ise me ye apne sare form ka box ko iffect kr sakta h is liye columnspan=3 karne se ye apna 3 column lega.
+ checkBtn=ttk.Checkbutton(win, text='Check if you fill all box and all information are currect.').grid(row=6,columnspan=3)
+ ab isko wahi purana with open() as f se kahi or koi page me le lenge.
+ .grid() ko baad me nhi likhne se wo delete submit dene pr kaam nhi karta h is liye bhi isko saperate nhi karna chahiye.
+ koi box ka use hone ke baad clear hone ke liye delete ka use karte h 
+ nameEntryBox.delete(0,END) 
+ of bhi task perform karne ke liye isko down me likhna he sahi h. 
+ 
+from tkinter import *
+from tkinter import ttk
+win = Tk()
+win.title('Tr.')
+nameLabel=ttk.Label(win,text='Enter a Name : ')
+nameLabel.grid(row=0,column=0,sticky='w')
+nameVar=StringVar()
+nameEntryBox=Entry(win,width=16, textvariable=nameVar)
+nameEntryBox.focus()
+nameEntryBox.grid(row=0,column=1)
+
+ageLabel=ttk.Label(win,text='Apna Age : ')
+ageLabel.grid(row=1,column=0,sticky='w')
+ageVar=StringVar()
+ageEntryBox=ttk.Entry(win,width=16, textvariable=ageVar)
+ageEntryBox.grid(row=1,column=1)
+
+emailLabel=ttk.Label(win,text='Enter a Email : ')
+emailLabel.grid(row=2,column=0,sticky='w')
+emailVar=StringVar()
+emailEntryBox=ttk.Entry(win,width=16, textvariable=emailVar)
+emailEntryBox.grid(row=2,column=1)
+
+addressLabel=ttk.Label(win,text='Apna Address : ')
+addressLabel.grid(row=3,column=0,sticky='w')
+addressVar=StringVar()
+addressEntryBox=ttk.Entry(win,width=16, textvariable=addressVar)
+addressEntryBox.grid(row=3,column=1)
+
+genderLabel=ttk.Label(win,text='Gander : ' )
+genderLabel.grid(row=4,column=0,sticky='w')
+genderVar=StringVar()
+genderCombobox=ttk.Combobox(win, width=15, textvariable=genderVar, state='readonly')
+genderCombobox['values']=('Select','Male','Female','Other')
+genderCombobox.current(0)
+genderCombobox.grid(row=4, column=1)
+
+userType=StringVar()
+radoBtn1=ttk.Radiobutton(win, text='Student', value='Student', variable=userType).grid(row=5,column=0)
+radoBtn2=ttk.Radiobutton(win, text='Teacher', value='Teacher', variable=userType).grid(row=5,column=1)
+
+checkVar=IntVar()
+checkBtn=ttk.Checkbutton(win, text='Check if you fill all box and all information are currect.', variable=checkVar).grid(row=6,columnspan=3)
+
+def action():
+	username=nameVar.get()
+	userage=ageVar.get()
+	useremail=emailVar.get()
+	useraddress=addressVar.get()
+	usergender=genderVar.get()
+	userradio=userType.get()
+	if checkVar.get()==0:
+		result='No'
+	else:
+		result='Yes'
+#	print(f'Hola! {username} ab aap {userage} ke ho gaye or aapka {useremail} kitna ganda h, or aapka address {useraddress} pata nhi chal raha h. aap {usergender} h mere ko laga aap 6ka ho. chalo ab kaam ka baat aap {userradio} ho is liye aapka result {result}')
+
+	with open('guitkinter.txt','a') as f:
+		f.write(f'{username},{userage},{useremail},{useraddress},{usergender},{userradio},{result}\n')	
+		
+	nameEntryBox.delete(0,END)
+	ageEntryBox.delete(0,END)
+	emailEntryBox.delete(0,END)
+	addressEntryBox.delete(0,END)
+	nameLabel.configure(foreground='Blue')	
+
+submitButton=ttk.Button(win, text='Ok', command=action).grid(row=7,column=0)
+
+win.mainloop()
+
+
+ 
+ for loop se labels bnane ke liye pahle to tk ka sara module call kr lena h or jo jo function h wo bhi kr lena h. ab ek list bana lena h jisme likha ho ke label me kya-kya hona chahiye. ab for loop laga kr pahle to apne ko label utna he bnana h jitna list ka len ho to len me lis de denge ab ek curr naam se bana kr jisme apna list ka address ho or string me i likha ho taki pata chale kitnna time badhega or text me apna list ka naam de kr uspr sara methdo ke kisa bnana h sara detail de kr run kara dena h lo ho gaya. sticky ka use rokne ke liye hota h yaha w likha h bole to isko west side he rakhna h.
+for i in range (len(lis)):
+	currLabel = 'lis' + str(i) 
+	currLabel = ttk.Label(win, text = lis[i])
+	currLabel.grid(row = i , column = 0, sticky = 'w' )
+	
+ab entry box bnane ke liye isko ek dic bnana hoga jisme key likhna hoga  jo ke variable ka kaam karega ab for loop laga kr same process iska bhi hoga entry +i se ye bnate jayega fir iska sara detail de dena h pahle jisa bs row ko bandhe ke liye ek or variable bnana hoga jo ke loop me jane pr auto 1 badhta rahe taki box niche aata rahe.
+nameVar = StringVar()
+userInfo = {
+	'name' : StringVar(),
+	'age' : StringVar(),
+	'gender' : StringVar(),
+	'country' : StringVar(),
+	'state' : StringVar(),
+	'city' : StringVar()
+}
+
+iske use se form table create karna kafi easy ho jata h bole to mere ko yadi koi or label add karna h to easy list or dic me add karne h or submit ke position ko change karna h bs ho gaya. 
+from tkinter import *
+from tkinter import ttk
+
+win =Tk()
+win.title('Label Loop ke use se.')
+
+lis = ['Name batao : ', 'Age bhi bata do : ', 'Gender bhi : ', 'Desh kon sa h : ', 'State bhi : ', 'City  bhi bata do : ']
+
+for i in range (len(lis)):
+	currLabel = 'lis' + str(i) 
+	currLabel = ttk.Label(win, text = lis[i])
+	currLabel.grid(row = i , column = 0, sticky = 'w', padx = 2 , pady = 2 )
+
+
+nameVar = StringVar()
+userInfo = {
+	'name' : StringVar(),
+	'age' : StringVar(),
+	'gender' : StringVar(),
+	'country' : StringVar(),
+	'state' : StringVar(),
+	'city' : StringVar()
+}
+
+counter = 0
+for i in userInfo:
+	currentEntryBox = 'entry' +i
+	currentEntryBox = Entry(win, width =16, textvariable = userInfo[i])
+	currentEntryBox.grid(row = counter , column = 1, padx = 2 , pady = 2 )
+	counter += 1
+
+def submit():
+	print(userInfo['name'].get())
+	print(userInfo['age'].get())
+	print(userInfo['gender'].get())
+	print(userInfo['country'].get())
+	print(userInfo['state'].get())
+	print(userInfo['city'].get())
+
+submitBtn = Button(win, text = 'Ok', command = submit)
+submitBtn.grid(row = 6, columnspan = 2)
+#nameEntry = Entry(win, width = 16, textvariable = nameVar)
+#nameEntry.grid(row = 0, column = 1)
+win.mainloop()  
+
+
+
+
+
+ padx = 10 , pady = 5 ----> ye apne banaye hue list ko thora dur karne ke liye use hota h bole to padx se hum apne form ke left or right me distande de sakte h pixel me or ise he pady se top botom me distance de sakte h 
+ 
+ yaha pr ab pata chalega ke kuch bhi bnane ke time hum win q likhte the qke ye apne main label ko dekha raha tha pr ab yadi mere apne main ke ander koi or lebel bnana ho or uske ander kuch karna ho to tum jaha win likhe the wala apne purane wale ka pata likhna hoga. ab aata h ke apne label jo new banaye h usko bhi thora pading kar de to ise me ek method aata h winfo_children(): ye apne lebel jo banaye h usko pading karne ka kaam karta h. 
+ from tkinter import *
+from tkinter import ttk
+
+win =Tk()
+win.title('Label  ke ander Label')
+
+labelframe = LabelFrame(win, text = 'Enter Your details below')
+labelframe.grid(row = 0, column = 0)
+
+lis = ['Name batao : ', 'Age bhi bata do : ', 'Gender bhi : ', 'Desh kon sa h : ', 'State bhi : ', 'City  bhi bata do : ']
+
+for i in range (len(lis)):
+	currLabel = 'lis' + str(i) 
+	currLabel = ttk.Label(labelframe, text = lis[i])
+	currLabel.grid(row = i , column = 0, sticky = 'w', padx = 2 , pady = 2 )
+
+nameVar = StringVar()
+userInfo = {
+	'name' : StringVar(),
+	'age' : StringVar(),
+	'gender' : StringVar(),
+	'country' : StringVar(),
+	'state' : StringVar(),
+	'city' : StringVar()
+}
+
+counter = 0
+for i in userInfo:
+	currentEntryBox = 'entry' +i
+	currentEntryBox = Entry(labelframe, width =16, textvariable = userInfo[i])
+	currentEntryBox.grid(row = counter , column = 1, padx = 2 , pady = 2 )
+	counter += 1
+
+def submit():
+	print(userInfo['name'].get())
+	print(userInfo['age'].get())
+	print(userInfo['gender'].get())
+	print(userInfo['country'].get())
+	print(userInfo['state'].get())
+	print(userInfo['city'].get())
+
+submitBtn = Button(win, text = 'Ok', command = submit)
+submitBtn.grid(row = 2, columnspan = 2)
+
+for child in labelframe.winfo_children():
+	child.grid_configure(padx = 4, pady = 4)
+
+win.mainloop()  
+
+
+ 
+window kholne pr upper me jo view new type ka option aata h ye kuch isa h ke isme kuch  notebook naam se diya hota h  jisme use se hum sheet jisa bana sakte h or sabme alag alag performance kr sakte h. ye create hone ke baad jitne me apna work h utna he space leta h ise me pura page use ho ke liye nb.pack(expand = True, fill = 'both') ka use karte h isme expand mtlb badhana h or fill puch raha h kitna to both ka mtlb vertical or horizantad dono bandhana h.
+from tkinter import *
+from tkinter import ttk
+
+win =Tk()
+win.title('Two page bnane ka tarika.')
+nb = ttk.Notebook(win)
+page1 = ttk.Frame(nb)
+page2 = ttk.Frame(nb)
+nb.add(page1, text = 'First')
+nb.add(page2, text = 'Second')
+#nb.grid(row = 0, column = 0)
+nb.pack(expand = True, fill = 'both')
+
+label1 = ttk.Label(page1, text = 'Ye First page h.')
+label1.grid(row = 0, column = 0, padx = 5, pady = 5)
+entryBox1 = Entry(page1, width = 16)
+entryBox1.grid(row = 0, column = 1, padx = 5, pady =5)
+
+label2 = ttk.Label(page2, text = 'Ye Second page h.')
+label2.grid(row = 0, column = 0, padx = 5, pady = 5)
+entryBox2 = Entry(page2, width = 16)
+entryBox2.grid(row = 0, column = 1, padx = 5, pady =5)
+
+win.mainloop()
+
+
+
+Menu ----> menu bnane ka tarika simple h bs pahle Menu() bnana h jisko win.config(menu=menubar) se end karna h. or iske ander apne menubar.add_command() jisme label bole kya naam hoga dena h or command me  wo action kya karega wo dena h. or menu ke ander menu bnana ho to pahle menu me main page ka address fir koi or variable me apne banaye hue menu ka address dena hota h taki usme he bane or new banaye hue me he add.command() or isme he label or action dena h. ab file.add_separator() se upper ka sara seprate hota h bole to line sa ho jata h or yadi exit btn bana h to command me apne page ka naam.quit dene se command me wo quit ka kaam krta  h. yadi menu me menu bana kr tearoff = 0 nhi karne pr wo alag ho jata h 
+# menu bnane ka tarika simple h bs pahle Menu() bnana h jisko win.config(menu=menubar) se end karna h. or iske ander apne menubar.add_command() jisme label bole kya naam hoga dena h or command me  wo action kya karega wo dena h. or menu ke ander menu bnana ho to pahle menu me main page ka address fir koi or variable me apne banaye hue menu ka address dena hota h taki usme he bane or new banaye hue me he add.command() or isme he label or action dena h. ab file.add_separator() se upper ka sara seprate hota h bole to line sa ho jata h or yadi exit btn bana h to command me apne page ka naam.quit dene se command me wo quit ka kaam krta  h. yadi menu me menu bana kr tearoff = 0 nhi karne pr wo alag ho jata h (tkmenu.py)
+
+from tkinter import *
+from tkinter import ttk
+
+win =Tk()
+win.title('Menubar')
+
+def save():
+	print('Check')
+menubar = Menu(win)
+#menubar.add_command(label = 'Save', command = save)
+#menubar.add_command(label = 'Cut', command = save)
+#menubar.add_command(label = 'Copy', command = save)
+#menubar.add_command(label = 'Paste', command = save)
+
+fileMenu = Menu(menubar, tearoff = 0)
+fileMenu.add_command(label ='New File', command = save)
+fileMenu.add_command(label ='New Window', command = save)
+fileMenu.add_command(label ='New Tab', command = save)
+
+fileMenu.add_separator()
+fileMenu.add_command(label ='Exit', command = win.quit)
+menubar.add_cascade(label = 'File', menu = fileMenu)
+
+editMenu = Menu(menubar, tearoff = 0)
+editMenu.add_command(label = 'Add', command = save)
+editMenu.add_command(label = 'Cut', command = save)
+editMenu.add_command(label = 'Copy', command = save)
+editMenu.add_command(label = 'Paste', command = save)
+menubar.add_cascade(label = 'Edit', menu = editMenu)
+
+
+win.config(menu = menubar)
+
+
+win.mainloop()
+
+
+apne submit btn pr koi msg print karane ke liye pahle to from tkiner import messagebox as m_box dena h jisme m_box ko call karna h ab submit btn pr m_box.showinfo('title', 'Message Sent...') define kr ke showinfo me kya msg dene hota h to submit enter hone pr ye msg show karega. or yadi m_box.showwarning se ye warning ke style me box dega or  m_box.shwoerror error jisa msg box dega. iske help se hum apne submit btn me kuch isa function de sakte h ke yadi mera box khali h to error me bole ke khali box h or yadi koi int wala box me charecter dale to bhi likh de ke number dena h. or apna message box me hum pahla main msg likhte h ke ke kis type ka h or fir kya msg de wo likhte h.
+#apne submit btn pr koi msg print karane ke liye pahle to from tkiner import messagebox as m_box dena h jisme m_box ko call karna h ab submit btn pr m_box.showinfo('title', 'Message Sent...') define kr ke showinfo me kya msg dene hota h to submit enter hone pr ye msg show karega. or yadi m_box.showwarning se ye warning ke style me box dega or  m_box.shwoerror error jisa msg box dega. iske help se hum apne submit btn me kuch isa function de sakte h ke yadi mera box khali h to error me bole ke khali box h or yadi koi int wala box me charecter dale to bhi likh de ke number dena h. or apna message box me hum pahla main msg likhte h ke ke kis type ka h or fir kya msg de wo likhte h.
+
+from tkinter import *
+from tkinter import ttk
+from tkinter import messagebox as m_box
+
+win =Tk()
+win.title('Label Loop ke use se.')
+
+nameLabel = Label(win, text = 'Apna Naam batao')
+nameLabel.grid(row = 0, column = 0, padx = 2, pady = 1, sticky ='w')
+ageLabel = Label(win, text = 'Apna Age batao')
+ageLabel.grid(row = 0, column = 1, padx = 2, pady = 1, sticky ='w')
+
+nameVar = StringVar()
+nameEntryBox = Entry(win, width = 16, textvariable = nameVar)
+nameEntryBox.grid(row = 1, column = 0)
+ageVar = StringVar()
+ageEntryBox = Entry(win, width = 16, textvariable = ageVar)
+ageEntryBox.grid(row = 1, column = 1)
+
+def submit():
+	name = nameVar.get()
+	age = ageVar.get()
+	if name =='' or age =='' :
+		m_box.showerror('Error', 'Sale khali Entry karta h')
+	else:
+		try:
+			age = int(age)
+		except ValueError:
+			m_box.showerror('Error', 'Are Pagli Age Number me batao')
+		else:
+			if age < 18:
+				m_box.showwarning('Warning', 'Bhag yaha se abhi tu Bachha h')
+			print(f'{name} : {age} \U0001F604 ')
+	#m_box.showinfo('title', 'Message Sent...')
+	#m_box.showwarning('title', 'Recheck Your data')
+	#m_box.showerror('title', 'Something went Wrong!')
+	
+
+submitBtn = Button(win, text = 'Ok', command = submit)
+submitBtn.grid(row = 6, columnspan = 2)
+#nameEntry = Entry(win, width = 16, textvariable = nameVar)
+#nameEntry.grid(row = 0, column = 1)
+win.mainloop()  
+
+
+
+
+
+				DataBase (mysql with python)
+
+
+pip install mysql-connector-python = iska use hum apne linux me mysql connector ko install karne ke liye karte h.
+mysql -h localhost -u root -p = apna linux pr kholne ke liye isme status likhne pr ye status btata h.
+conn = mysql.connector.connect(host='localhost', username = 'root', password='') = isko thora carefully karna hota h iske liye  pahle apne lampp ko open karna h or fir sql ko start karna h or iska detail dena h jise kis naam se h or pwd sab. .commit() 
+query = 'CREATE DATABASE newDatabase' = iska use database create karne ke liye karte h. or query = 'SHOW DATABASES' isko dekhne ke liye karte h.
+print(myCursor.fetchall()) = iska use hum apne data ko fetch kr ke print karane ke liye kr sakte h.
+iske alawa hum conn me host username pwd ke saath kise query me kaam karne ke liye direct database = 'database ka naam' de sakte h jo direct apne database ke saath operation karne kara sakta h. 
+
+import mysql.connector
+conn = mysql.connector.connect(host='localhost', username = 'root', password='', database = 'newDatabase')
+#print(conn)
+
+myCursor = conn.cursor()
+
+# new database bnane ke liye
+#query = 'CREATE DATABASE newDatabase'
+
+# kon kon sa database bana h dekhne ke liye
+query = 'SHOW DATABASES'
+myCursor.execute(query)
+
+# sara database ko list type ka dekhne ke liye
+#for database_name in myCursor:
+#	print(database_name)
+
+# apne database ka data ko dekhne ke liye
+#print(myCursor.fetchall())
+
+#
+myCurrent.execute('CREATE4 TABLE student0')
+
+conn.commit()
+conn.close()
+
+			Numpy ()
+			
+			
+numpy array hota h. isme maths ke operation ko kr sakte h ye list se speed hota h or isa hone ka region h ye isko function c se define kiye gaye h ab numpy me vector = 1d array, matrix = 2d, tensor = 3d array hota h.
+
+			Data Analasis()
+			
+isko karne ke liye pahle to anaconda ko install karna hoga fir usme jupyter notebook aayega jo ke apne browser me open hota h ab usme kuch cells aayega ab yadi sell blue color h to iska mtlb usme data entry kr sakte h fir box me click karne pr ho green ho jayega bole to ab ye edit mode pr h isme hum direct operations kara sakte h jise 2+3 likhne pr ye direct 5 ans de dega. ab isko run karane ke liye ctrl+ enter karna hoga to output me result de dega. ab yadi mere ko kuch import karna h to simple h import numpy as np dete h or niche line likhna h to shift+enter kar se 1 or box aa jayega. koi bhi likhe hue box ko del karne ke liye uspr jana h to wo green ho jayega fir esc click karna h or del karne ke liye del ko 2 times click karna h ab hum yadi 1 press karte h to # aa jata h jisse hum isme comment de saakte h or saath he <h1></h1> de  kr hum html ka command bhi use kr sakte h. jo ke apne output me html jisa he show hoga. window me to itna me ho jata h pr yadi isko linux me karna h to pahle to conda ko install karna hoga pip install conda se fir conda install -c conda-forge jupyterlab permission ke liye pip install jupyterlab jupyter ko install karne ke liye jupyter-lab open karne ke liye pr mere se ho nhi raha h is liye jupyter-lab --allow-root isa dena hoga taki ye ek page kholta h jisme ek link hota h jisko copy kr ke apne browser me open karna hota h fir isme apne kon sa python se work karna h dena hoga fir wahi sara process jo upper likha h karna hoga ho gaya.
